@@ -26,6 +26,27 @@
             font-size: 14px;
             font-weight: bold;
         }
+        .center-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.circular-image {
+    width: 700px; /* ajusta tamaño a tu gusto */
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 4px solid #4caf50; /* Borde verde saludable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
     </style>
 </head>
 <body>
@@ -34,6 +55,10 @@
             <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
             <h1>Quiz: Alimentación</h1>
             <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
+            <div class="center-image-container">
+                <img src="images/alimentacio1.jpg" alt="Comida post ejercicio saludable" class="circular-image">
+            </div>
+
             <div class="progress-bar-container">
                 <div class="progress-bar">0%</div>
             </div>
