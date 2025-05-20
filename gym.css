@@ -27,3 +27,11 @@ body {
     overflow: hidden;
     margin: 20px 0;
 }
+.barra-progreso {
+    background-color: #27ae60;
+    height: 10px;
+    transition: width 0.3s;
+}
+.bloque-pregunta {
+    margin-bottom: 30px;
+}
