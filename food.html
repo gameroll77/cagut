@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz: Gimnasio - Preguntas</title>
-    <link rel="stylesheet" href="food.css"> <link rel="stylesheet" href="quiz-style.css"> </head>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="quiz-style.css">
+    <style>
+        .progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0%;
+            transition: width 0.3s ease;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
     <div class="quiz-main-container">
         <header class="quiz-header">
@@ -12,178 +35,122 @@
             <h1>Quiz: Alimentación</h1>
             <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
             <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 10%;"></div> </div>
+                <div class="progress-bar">0%</div>
+            </div>
         </header>
 
         <main class="quiz-content">
             <form id="quizForm">
 
+                <!-- Pregunta 1 -->
                 <div class="question-block">
-                    <h2 class="question-title">Pregunta 1: Que comida se puede comer después de hacer ejercicio?</h2>
-                    <p class="question-text">Elije las comidas adecuadas que se puede comer al acabar de comer.</p>
-                     <img src="images/alimentacio1.jpg" alt="Comida post ejercicio saludable" class="question-image">
+                    <h2 class="question-title">Pregunta 1: ¿Qué comida se puede comer después de hacer ejercicio?</h2>
+                    <p class="question-text">Elige las comidas adecuadas que se pueden comer al acabar de entrenar.</p>
+                    <img src="images/alimentacio1.jpg" alt="Comida post ejercicio saludable" class="question-image">
                     <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q1" value="a">
-                            <span class="option-label">Opción A: Pollo a la plancha</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="b">
-                            <span class="option-label">Opción B: Batido de protenias con platano</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="c">
-                            <span class="option-label">Opción C: Coca cola con una hamburguesa</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="d">
-                            <span class="option-label">Opción D: Salchichas con jamón curado</span>
-                        </label>
+                        <label class="option"><input type="radio" name="q1" value="a"> Pollo a la plancha</label>
+                        <label class="option"><input type="radio" name="q1" value="b"> Batido de proteínas con plátano</label>
+                        <label class="option"><input type="radio" name="q1" value="c"> Coca cola con una hamburguesa</label>
+                        <label class="option"><input type="radio" name="q1" value="d"> Salchichas con jamón curado</label>
                     </div>
                 </div>
 
+                <!-- Pregunta 2 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 2: Verdadero o Falso</h2>
                     <p class="question-text">Comer frutas y verduras todos los días ayuda a prevenir enfermedades y mejora la salud.</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q2" value="true">
-                            <span class="option-label">Verdadero</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q2" value="false">
-                            <span class="option-label">Falso</span>
-                        </label>
+                        <label class="option"><input type="radio" name="q2" value="true"> Verdadero</label>
+                        <label class="option"><input type="radio" name="q2" value="false"> Falso</label>
                     </div>
                 </div>
 
+                <!-- Pregunta 3 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 3: Selección Múltiple</h2>
                     <p class="question-text">¿Cuál de los siguientes alimentos es una buena fuente de proteínas saludables?</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="a">
-                            <span class="option-label">Galletas de chocolate</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="b">
-                            <span class="option-label">Pechuga de pollo a la plancha</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="c">
-                            <span class="option-label">Refresco de cola</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="d">
-                            <span class="option-label">Pechuga de pavo rebozada.</span>
-                        </label>
+                        <label class="option"><input type="checkbox" name="q3" value="a"> Galletas de chocolate</label>
+                        <label class="option"><input type="checkbox" name="q3" value="b"> Pechuga de pollo a la plancha</label>
+                        <label class="option"><input type="checkbox" name="q3" value="c"> Refresco de cola</label>
+                        <label class="option"><input type="checkbox" name="q3" value="d"> Pechuga de pavo rebozada</label>
                     </div>
                 </div>
 
+                <!-- Pregunta 4 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 4: Rellenar el Espacio</h2>
-                    <p class="question-text"> "Para mantener una dieta equilibrada, es importante consumir frutas y verduras al menos <strong>______</strong> veces al día."</p></p>
+                    <p class="question-text">"Para mantener una dieta equilibrada, es importante consumir frutas y verduras al menos <strong>______</strong> veces al día."</p>
                     <div class="input-group">
                         <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
                     </div>
                 </div>
 
+                <!-- Pregunta 5 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 5: Respuesta Corta</h2>
-                    <p class="question-text">  ¿Por qué es importante incluir alimentos ricos en fibra en nuestra dieta diaria?</p>
+                    <p class="question-text">¿Por qué es importante incluir alimentos ricos en fibra en nuestra dieta diaria?</p>
                     <div class="input-group">
                         <textarea name="q5" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
                     </div>
                 </div>
 
+                <!-- Pregunta 6 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 6: Selección Múltiple</h2>
                     <p class="question-text">¿Cuál de los siguientes es un ejemplo de una fuente de grasas saludables?</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="a">
-                            <span class="option-label">Mantequilla</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="b">
-                            <span class="option-label">Aceite de oliva</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="c">
-                            <span class="option-label">Chips de tortilla</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="d">
-                            <span class="option-label">Batido de protenias de chocolate</span>
-                        </label>
+                        <label class="option"><input type="checkbox" name="q6" value="a"> Mantequilla</label>
+                        <label class="option"><input type="checkbox" name="q6" value="b"> Aceite de oliva</label>
+                        <label class="option"><input type="checkbox" name="q6" value="c"> Chips de tortilla</label>
+                        <label class="option"><input type="checkbox" name="q6" value="d"> Batido de proteínas de chocolate</label>
                     </div>
                 </div>
 
+                <!-- Pregunta 7 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 7: Verdadero o Falso</h2>
                     <p class="question-text">La miel es una alternativa más saludable que el azúcar refinado, ya que contiene vitaminas y minerales.</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q2" value="true">
-                            <span class="option-label">Verdadero</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q2" value="false">
-                            <span class="option-label">Falso</span>
-                        </label>
+                        <label class="option"><input type="radio" name="q7" value="true"> Verdadero</label>
+                        <label class="option"><input type="radio" name="q7" value="false"> Falso</label>
                     </div>
                 </div>
 
+                <!-- Pregunta 8 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 8: Verdadero o Falso</h2>
                     <p class="question-text">El pan integral es siempre más saludable que el pan blanco, ya que contiene más fibra y nutrientes.</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q2" value="true">
-                            <span class="option-label">Verdadero</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q2" value="false">
-                            <span class="option-label">Falso</span>
-                        </label>
+                        <label class="option"><input type="radio" name="q8" value="true"> Verdadero</label>
+                        <label class="option"><input type="radio" name="q8" value="false"> Falso</label>
                     </div>
                 </div>
 
-                 <div class="question-block">
+                <!-- Pregunta 9 -->
+                <div class="question-block">
                     <h2 class="question-title">Pregunta 9: Respuesta Corta</h2>
-                    <p class="question-text">  ¿Cuantos litros de agua es recomendable beber a lo largo del dia?</p>
+                    <p class="question-text">¿Cuántos litros de agua es recomendable beber a lo largo del día?</p>
                     <div class="input-group">
-                        <textarea name="q5" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
+                        <textarea name="q9" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
                     </div>
                 </div>
 
+                <!-- Pregunta 10 -->
                 <div class="question-block">
                     <h2 class="question-title">Pregunta 10: Selección Múltiple</h2>
                     <p class="question-text">¿Cuál de los siguientes alimentos es una fuente rica en carbohidratos complejos?</p>
                     <div class="options-group">
-                        <label class="option">
-                            <input type="checkbox" name="q11" value="a">
-                            <span class="option-label">Arroz blanco</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q11" value="b">
-                            <span class="option-label">Pan integral</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q11" value="c">
-                            <span class="option-label">Galletas procesadas</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q11" value="d">
-                            <span class="option-label">Jugos artificiales</span>
-                        </label>
+                        <label class="option"><input type="checkbox" name="q10" value="a"> Arroz blanco</label>
+                        <label class="option"><input type="checkbox" name="q10" value="b"> Pan integral</label>
+                        <label class="option"><input type="checkbox" name="q10" value="c"> Galletas procesadas</label>
+                        <label class="option"><input type="checkbox" name="q10" value="d"> Jugos artificiales</label>
                     </div>
                 </div>
 
-
                 <div class="quiz-navigation">
                     <button type="submit" class="submit-button">Enviar Respuestas</button>
-                    </div>
+                </div>
             </form>
         </main>
 
@@ -191,8 +158,36 @@
             <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
         </footer>
     </div>
+
     <script>
-        
+        const totalQuestions = 10;
+
+        function updateProgressBar() {
+            let answeredCount = 0;
+
+            if (document.querySelector('input[name="q1"]:checked')) answeredCount++;
+            if (document.querySelector('input[name="q2"]:checked')) answeredCount++;
+            if (document.querySelectorAll('input[name="q3"]:checked').length > 0) answeredCount++;
+            if (document.querySelector('input[name="q4"]').value.trim() !== "") answeredCount++;
+            if (document.querySelector('textarea[name="q5"]').value.trim() !== "") answeredCount++;
+            if (document.querySelectorAll('input[name="q6"]:checked').length > 0) answeredCount++;
+            if (document.querySelector('input[name="q7"]:checked')) answeredCount++;
+            if (document.querySelector('input[name="q8"]:checked')) answeredCount++;
+            if (document.querySelector('textarea[name="q9"]').value.trim() !== "") answeredCount++;
+            if (document.querySelectorAll('input[name="q10"]:checked').length > 0) answeredCount++;
+
+            const percent = Math.round((answeredCount / totalQuestions) * 100);
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = percent + "%";
+            progressBar.textContent = percent + "%";
+        }
+
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('input', updateProgressBar);
+            input.addEventListener('change', updateProgressBar);
+        });
+
+        window.addEventListener('DOMContentLoaded', updateProgressBar);
     </script>
 </body>
 </html>
