@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="food.css">
     <link rel="stylesheet" href="quiz-style.css">
     <style>
-        .progress-bar-container {
+       .progress-bar-container {
             width: 100%;
             background-color: #ddd;
             height: 20px;
@@ -26,26 +26,49 @@
             font-size: 14px;
             font-weight: bold;
         }
+
         .center-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
 
-.circular-image {
-    width: 700px; /* ajusta tamaño a tu gusto */
-    height: 400px;
-    object-fit: cover;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 4px solid #4caf50; /* Borde verde saludable */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .circular-image {
+            width: 700px; /* ajusta tamaño a tu gusto */
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 4px solid #4caf50; /* Borde verde saludable */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.circular-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
+        .circular-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo del cuadro final de resultados */
+        .final-box {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .final-box .result-message {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .final-box .result-detail {
+            font-size: 16px;
+            color: #333;
+        }
 
     </style>
 </head>
@@ -192,9 +215,18 @@
             <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
         </footer>
     </div>
+        <div class="final-box">
+            
+
+        </div>
 
     <script>
         const totalQuestions = 10;
+        const RespotesCorrectes = 0;
+
+
+
+
 
         function updateProgressBar() {
             let answeredCount = 0;
