@@ -18,3 +18,12 @@ body {
 }.encabezado-quiz h1 {
     color: #2c3e50;
 }
+.subtitulo-quiz {
+    color: #7f8c8d;
+}
+.barra-progreso-contenedor {
+    background: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
