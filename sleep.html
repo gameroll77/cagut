@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Gimnasio - Preguntas</title>
-    <link rel="stylesheet" href="sleep.css"> <link rel="stylesheet" href="quiz-style.css"> </head>
+    <title>Quiz: Sueño - Preguntas</title>
+    <link rel="stylesheet" href="sleep.css">
+    <link rel="stylesheet" href="quiz-style.css">
+</head>
 <body>
     <div class="quiz-main-container">
         <header class="quiz-header">
@@ -12,95 +14,189 @@
             <h1>Quiz: Sueño</h1>
             <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
             <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 10%;"></div> </div>
+                <div class="progress-bar" style="width: 10%;"></div>
+            </div>
         </header>
 
         <main class="quiz-content">
+            <img src="images/sleepy.jpg" class="qimage">
             <form id="quizForm">
-                <img src="images/sleepy.jpg" class="qimage">
-                   <div class="question-block">
-                   
-                    <h2 class="question-title">Pregunta 1: Opción Múltiple</h2>
-
-                    <p class="question-text">¿Cuál es la fase del sueño más asociada con los sueños vívidos y la parálisis muscular temporal?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q1" value="a">
-                            <span class="option-label">Fase 1 NREM</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="b">
-                            <span class="option-label">Fase 3 NREM (Sueño Profundo)</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="c">
-                            <span class="option-label">Fase REM (Movimiento Rápido de los Ojos)</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="d">
-                            <span class="option-label">Fase 2 NREM</span>
-                        </label>
-                    </div>
-                </div>
-                <img src="images/concentracion.jpg" class="qimage">
-                
+                <!-- Pregunta 1: Verdadero o falso -->
                 <div class="question-block">
-                    <h2 class="question-title">Pregunta 2: Verdadero o Falso</h2>
+                    <h2 class="question-title">Pregunta 1: Verdadero o Falso</h2>
                     <p class="question-text">Dormir al menos 8 horas cada noche mejora la memoria y la concentración.</p>
                     <div class="options-group">
                         <label class="option">
-                            <input type="radio" name="q2" value="true">
+                            <input type="radio" name="q1" value="verdadero">
                             <span class="option-label">Verdadero</span>
                         </label>
                         <label class="option">
-                            <input type="radio" name="q2" value="false">
+                            <input type="radio" name="q1" value="falso">
                             <span class="option-label">Falso</span>
                         </label>
                     </div>
                 </div>
 
+                <!-- Pregunta 2: Opción múltiple -->
+                 <img src="images/bien.jpg" class="qimage">
                 <div class="question-block">
-                    <h2 class="question-title">Pregunta 3: Selección Múltiple</h2>
-                    <p class="question-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt?</p>
+                    <h2 class="question-title">Pregunta 2: Opción Múltiple</h2>
+                    <p class="question-text">¿Cuál de los siguientes es un beneficio de dormir bien?</p>
                     <div class="options-group">
                         <label class="option">
-                            <input type="checkbox" name="q3" value="a">
-                            <span class="option-label">Opción Alpha: Neque porro quisquam.</span>
+                            <input type="radio" name="q2" value="a">
+                            <span class="option-label">Aumento del estrés</span>
                         </label>
                         <label class="option">
-                            <input type="checkbox" name="q3" value="b">
-                            <span class="option-label">Opción Beta: Est qui dolorem ipsum.</span>
+                            <input type="radio" name="q2" value="b">
+                            <span class="option-label">Mejor salud cardiovascular</span>
                         </label>
                         <label class="option">
-                            <input type="checkbox" name="q3" value="c">
-                            <span class="option-label">Opción Gamma: Quia dolor sit amet.</span>
+                            <input type="radio" name="q2" value="c">
+                            <span class="option-label">Disminución de la creatividad</span>
                         </label>
                         <label class="option">
-                            <input type="checkbox" name="q3" value="d">
-                            <span class="option-label">Opción Delta: Consectetur, adipisci velit.</span>
+                            <input type="radio" name="q2" value="d">
+                            <span class="option-label">Mayor propensión a enfermedades</span>
                         </label>
                     </div>
                 </div>
 
+                <!-- Pregunta 3: Opción múltiple -->
+                 <img src="images/mela.png" class="qimage">
                 <div class="question-block">
-                    <h2 class="question-title">Pregunta 4: Rellenar el Espacio</h2>
-                    <p class="question-text">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum ________ atque corrupti quos dolores."</p>
+                    <h2 class="question-title">Pregunta 3: Opción Múltiple</h2>
+                    <p class="question-text">¿Qué hormona está relacionada con el sueño y ayuda a regular el ritmo circadiano?</p>
+                    <div class="options-group">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a">
+                            <span class="option-label">Serotonina</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b">
+                            <span class="option-label">Adrenalina</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c">
+                            <span class="option-label">Melatonina</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="d">
+                            <span class="option-label">Cortisol</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4: Respuesta corta -->
+                 <img src="images/tiempo.jpg" class="qimage">
+                <div class="question-block">
+                    <h2 class="question-title">Pregunta 4: Respuesta Corta</h2>
+                    <p class="question-text">¿Cuántas horas de sueño se recomiendan para un adulto promedio?</p>
                     <div class="input-group">
                         <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
                     </div>
                 </div>
 
+                <!-- Pregunta 5: Opción múltiple -->
                 <div class="question-block">
-                    <h2 class="question-title">Pregunta 5: Respuesta Corta</h2>
-                    <p class="question-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Explica brevemente.</p>
+                    <h2 class="question-title">Pregunta 5: Opción Múltiple</h2>
+                    <p class="question-text">¿Cuál de estas prácticas contribuye a una buena higiene del sueño?</p>
+                    <div class="options-group">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a">
+                            <span class="option-label">Ver televisión en la cama</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b">
+                            <span class="option-label">Tomar café por la noche</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c">
+                            <span class="option-label">Dormir y despertarse a la misma hora todos los días</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="d">
+                            <span class="option-label">Usar el celular justo antes de dormir</span>
+                        </label>
+                    </div>
+                </div>
+                <img src="images/concentracion.jpg" class="qimage">
+                <!-- Pregunta 6: Verdadero o falso -->
+                <div class="question-block">
+                    <h2 class="question-title">Pregunta 6: Verdadero o Falso</h2>
+                    <p class="question-text">Las siestas de más de 60 minutos siempre mejoran el rendimiento cognitivo.</p>
+                    <div class="options-group">
+                        <label class="option">
+                            <input type="radio" name="q6" value="verdadero">
+                            <span class="option-label">Verdadero</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="falso">
+                            <span class="option-label">Falso</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7: Selección múltiple -->
+                <div class="question-block">
+                    <h2 class="question-title">Pregunta 7: Selección Múltiple</h2>
+                    <p class="question-text">¿Qué consecuencias puede tener la falta crónica de sueño? (Selecciona todas las que correspondan)</p>
+                    <div class="options-group">
+                        <label class="option">
+                            <input type="checkbox" name="q7" value="a">
+                            <span class="option-label">Aumento de peso</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="q7" value="b">
+                            <span class="option-label">Mejora del sistema inmunológico</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="q7" value="c">
+                            <span class="option-label">Problemas de memoria</span>
+                        </label>
+                        <label class="option">
+                            <input type="checkbox" name="q7" value="d">
+                            <span class="option-label">Mayor riesgo de enfermedades cardíacas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8: Opción múltiple -->
+                <div class="question-block">
+                    <h2 class="question-title">Pregunta 8: Opción Múltiple</h2>
+                    <p class="question-text">¿Qué se recomienda hacer si no puedes dormir después de 20 minutos?</p>
+                    <div class="options-group">
+                        <label class="option">
+                            <input type="radio" name="q8" value="a">
+                            <span class="option-label">Seguir acostado esperando dormir</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="b">
+                            <span class="option-label">Levantarte y hacer una actividad tranquila con poca luz</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="c">
+                            <span class="option-label">Tomar el celular para distraerte</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="d">
+                            <span class="option-label">Comer algo pesado</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9: Respuesta corta -->
+                <div class="question-block">
+                    <h2 class="question-title">Pregunta 9: Respuesta Corta</h2>
+                    <p class="question-text">Menciona una técnica o hábito que puede ayudarte a dormir mejor.</p>
                     <div class="input-group">
-                        <textarea name="q5" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
+                        <textarea name="q9" rows="3" placeholder="Tu respuesta aquí..." class="text-input"></textarea>
                     </div>
                 </div>
 
                 <div class="quiz-navigation">
                     <button type="submit" class="submit-button">Enviar Respuestas</button>
-                    </div>
+                </div>
             </form>
         </main>
 
