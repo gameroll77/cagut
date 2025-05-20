@@ -61,3 +61,46 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.grupo-opciones input {
+    margin-right: 10px;
+}
+        
+.grupo-entrada input,
+.grupo-entrada textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.boton-enviar {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.boton-enviar:hover {
+    background-color: #1c5980;
+}
+
+.pie-quiz {
+    text-align: center;
+    margin-top: 40px;
+    color: #95a5a6;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #3498db;
+    text-decoration: none;
+}
+        
+.boton-volver:hover {
+    text-decoration: underline;
+}
