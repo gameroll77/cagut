@@ -133,7 +133,7 @@ body {
 }
 
 .question-image {
-    width: calc(100% + 20px); /* Se extiende horizontalmente más allá del contenedor */
+    width: calc(100% + 10px); /* Se extiende horizontalmente más allá del contenedor */
     max-width: none;
     margin: 20px -20px;
     display: block;
@@ -147,7 +147,9 @@ body {
     height: auto;
     aspect-ratio: 16 / 6; /* Proporción más ancha y baja */
     object-fit: cover;    /* Asegura que la imagen rellene el espacio sin distorsión */
+    margin-left: -9px;
 }
+
 
 
 .question-image:hover {
