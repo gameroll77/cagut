@@ -200,3 +200,38 @@ body {
     color: #a0a0d0;
     font-size: 0.9em;
 }
+.final-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    max-width: 500px;
+    width: 90%;
+    background-color: #353560;
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.final-box h2 {
+    font-size: 1.8rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.result-message {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.result-detail {
+    font-size: 1.1rem;
+    color: #dddddd;
+}
