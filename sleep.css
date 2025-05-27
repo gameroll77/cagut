@@ -3,6 +3,10 @@
 body {
     background-color: #1e1e2f; /* Un fondo oscuro ligeramente diferente o más texturizado para el quiz */
     color: #f0f0f0;
+    font-family: Arial, sans-serif; /* Añadido para consistencia */
+    line-height: 1.6; /* Añadido para consistencia */
+    margin: 0; /* Añadido para consistencia */
+    padding: 0; /* Añadido para consistencia */
 }
 
 .quiz-main-container {
@@ -15,14 +19,17 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .qimage{
-    align-items: center;
-    margin-left: 6vw;
+    display: block; /* Para que margin auto funcione */
+    margin-left: auto; /* Centrado */
+    margin-right: auto; /* Centrado */
     margin-top: 2vh;
     margin-bottom: 2vh;
     border-radius: 10px;
     box-shadow: 0px 4px 12px 0px #5a5a8a;
-    max-height: 366px;
-    max-width: 550px;
+    max-height: 300px; /* Ajustado para que no sea demasiado grande */
+    max-width: 90%;   /* Que no exceda el contenedor de pregunta */
+    width: auto;      /* Mantiene la proporción */
+    height: auto;     /* Mantiene la proporción */
 }
 .quiz-header {
     text-align: center;
@@ -85,6 +92,8 @@ body {
     margin-bottom: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid transparent; /* Base para feedback */
+    transition: border-left-color 0.3s ease; /* Transición para el color del borde */
 }
 
 .question-title {
@@ -114,14 +123,14 @@ body {
     background-color: #2c2c54; /* Fondo de las opciones */
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-left 0.2s ease;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease; /* border-left-color */
     border: 1px solid #4a4a7a;
     border-left: 5px solid transparent; /* Para efecto hover/selected */
 }
 
 .option:hover {
     background-color: #3e3e6d;
-    border-left: 5px solid #6a6aff; /* Color de acento al pasar el ratón */
+    border-left-color: #6a6aff; /* Color de acento al pasar el ratón, solo el color */
 }
 
 .option input[type="radio"],
@@ -136,24 +145,12 @@ body {
     color: #e0e0e0;
 }
 
-/* Estilo para cuando una opción está seleccionada (se manejaría con JS para más control) */
-/* .option input[type="radio"]:checked + .option-label,
-.option input[type="checkbox"]:checked + .option-label {
-    font-weight: bold;
-    color: #4caf50;
-} */
-/* .option input[type="radio"]:checked ~ .option,
-.option input[type="checkbox"]:checked ~ .option {
-    border-left: 5px solid #4caf50;
-} */
-
-
 .input-group {
     margin-top: 10px;
 }
 
 .text-input {
-    width: 100%;
+    width: calc(100% - 24px); /* 100% - padding L/R */
     padding: 12px;
     border: 1px solid #4a4a7a;
     background-color: #252545;
@@ -161,6 +158,7 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
+    box-sizing: border-box; /* Importante para que el padding no aumente el ancho total */
 }
 
 .text-input::placeholder {
@@ -196,4 +194,54 @@ body {
     border-top: 1px solid #4a4a7a;
     color: #a0a0d0;
     font-size: 0.9em;
+}
+
+/* --- Estilos para Feedback --- */
+.question-block.correct-answer {
+    border-left-color: #66bb6a; /* Verde claro para correcto */
+}
+.question-block.incorrect-answer {
+    border-left-color: #ef5350; /* Rojo claro para incorrecto */
+}
+
+.option-label.correct-choice {
+    font-weight: bold;
+    color: #76ff03; /* Verde lima brillante */
+}
+.option-label.incorrect-choice-selected {
+    text-decoration: line-through;
+    color: #ff5252; /* Rojo brillante */
+}
+
+.feedback-text {
+    font-size: 0.9em;
+    margin-top: 10px; /* Más espacio */
+    padding: 5px;
+    border-radius: 4px;
+}
+.correct-feedback {
+    color: #c8e6c9; /* Texto verde pastel */
+    background-color: rgba(102, 187, 106, 0.2); /* Fondo verde sutil */
+}
+.incorrect-feedback {
+    color: #ffcdd2; /* Texto rojo pastel */
+    background-color: rgba(239, 83, 80, 0.2); /* Fondo rojo sutil */
+}
+
+#results-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #353560; /* Similar a question-block */
+    border: 1px solid #4a4a7a;
+    border-radius: 8px;
+    text-align: center;
+}
+#results-container h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+#results-container p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 10px;
 }

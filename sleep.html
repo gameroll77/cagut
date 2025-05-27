@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz: Sueño - Preguntas</title>
     <link rel="stylesheet" href="sleep.css">
-    <link rel="stylesheet" href="quiz-style.css">
 </head>
 <body>
     <div class="quiz-main-container">
@@ -14,15 +13,14 @@
             <h1>Quiz: Sueño</h1>
             <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
             <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 10%;"></div>
+                <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
             </div>
         </header>
 
         <main class="quiz-content">
-            <img src="images/sleepy.jpg" class="qimage">
             <form id="quizForm">
-                <!-- Pregunta 1: Verdadero o falso -->
-                <div class="question-block">
+                <img src="images/sleepy.jpg" class="qimage" alt="Persona durmiendo">
+                <div class="question-block" id="qb1">
                     <h2 class="question-title">Pregunta 1: Verdadero o Falso</h2>
                     <p class="question-text">Dormir al menos 8 horas cada noche mejora la memoria y la concentración.</p>
                     <div class="options-group">
@@ -35,11 +33,11 @@
                             <span class="option-label">Falso</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f1"></div>
                 </div>
 
-                <!-- Pregunta 2: Opción múltiple -->
-                 <img src="images/bien.jpg" class="qimage">
-                <div class="question-block">
+                <img src="images/bien.jpg" class="qimage" alt="Persona sintiéndose bien">
+                <div class="question-block" id="qb2">
                     <h2 class="question-title">Pregunta 2: Opción Múltiple</h2>
                     <p class="question-text">¿Cuál de los siguientes es un beneficio de dormir bien?</p>
                     <div class="options-group">
@@ -60,11 +58,11 @@
                             <span class="option-label">Mayor propensión a enfermedades</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f2"></div>
                 </div>
 
-                <!-- Pregunta 3: Opción múltiple -->
-                 <img src="images/mela.png" class="qimage">
-                <div class="question-block">
+                <img src="images/mela.png" class="qimage" alt="Molécula de melatonina">
+                <div class="question-block" id="qb3">
                     <h2 class="question-title">Pregunta 3: Opción Múltiple</h2>
                     <p class="question-text">¿Qué hormona está relacionada con el sueño y ayuda a regular el ritmo circadiano?</p>
                     <div class="options-group">
@@ -85,20 +83,20 @@
                             <span class="option-label">Cortisol</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f3"></div>
                 </div>
 
-                <!-- Pregunta 4: Respuesta corta -->
-                 <img src="images/tiempo.jpg" class="qimage">
-                <div class="question-block">
+                <img src="images/tiempo.jpg" class="qimage" alt="Reloj">
+                <div class="question-block" id="qb4">
                     <h2 class="question-title">Pregunta 4: Respuesta Corta</h2>
                     <p class="question-text">¿Cuántas horas de sueño se recomiendan para un adulto promedio?</p>
                     <div class="input-group">
                         <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
                     </div>
+                    <div class="feedback-text" id="f4"></div>
                 </div>
 
-                <!-- Pregunta 5: Opción múltiple -->
-                <div class="question-block">
+                <div class="question-block" id="qb5">
                     <h2 class="question-title">Pregunta 5: Opción Múltiple</h2>
                     <p class="question-text">¿Cuál de estas prácticas contribuye a una buena higiene del sueño?</p>
                     <div class="options-group">
@@ -119,10 +117,11 @@
                             <span class="option-label">Usar el celular justo antes de dormir</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f5"></div>
                 </div>
-                <img src="images/concentracion.jpg" class="qimage">
-                <!-- Pregunta 6: Verdadero o falso -->
-                <div class="question-block">
+
+                <img src="images/concentracion.jpg" class="qimage" alt="Persona concentrada">
+                <div class="question-block" id="qb6">
                     <h2 class="question-title">Pregunta 6: Verdadero o Falso</h2>
                     <p class="question-text">Las siestas de más de 60 minutos siempre mejoran el rendimiento cognitivo.</p>
                     <div class="options-group">
@@ -135,10 +134,10 @@
                             <span class="option-label">Falso</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f6"></div>
                 </div>
 
-                <!-- Pregunta 7: Selección múltiple -->
-                <div class="question-block">
+                <div class="question-block" id="qb7">
                     <h2 class="question-title">Pregunta 7: Selección Múltiple</h2>
                     <p class="question-text">¿Qué consecuencias puede tener la falta crónica de sueño? (Selecciona todas las que correspondan)</p>
                     <div class="options-group">
@@ -159,10 +158,10 @@
                             <span class="option-label">Mayor riesgo de enfermedades cardíacas</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f7"></div>
                 </div>
 
-                <!-- Pregunta 8: Opción múltiple -->
-                <div class="question-block">
+                <div class="question-block" id="qb8">
                     <h2 class="question-title">Pregunta 8: Opción Múltiple</h2>
                     <p class="question-text">¿Qué se recomienda hacer si no puedes dormir después de 20 minutos?</p>
                     <div class="options-group">
@@ -183,26 +182,325 @@
                             <span class="option-label">Comer algo pesado</span>
                         </label>
                     </div>
+                    <div class="feedback-text" id="f8"></div>
                 </div>
 
-                <!-- Pregunta 9: Respuesta corta -->
-                <div class="question-block">
+                <div class="question-block" id="qb9">
                     <h2 class="question-title">Pregunta 9: Respuesta Corta</h2>
                     <p class="question-text">Menciona una técnica o hábito que puede ayudarte a dormir mejor.</p>
                     <div class="input-group">
                         <textarea name="q9" rows="3" placeholder="Tu respuesta aquí..." class="text-input"></textarea>
                     </div>
+                    <div class="feedback-text" id="f9"></div>
                 </div>
 
                 <div class="quiz-navigation">
                     <button type="submit" class="submit-button">Enviar Respuestas</button>
                 </div>
             </form>
+
+            <div id="results-container" style="display: none;">
+                <h2>Resultados del Quiz</h2>
+                <p id="score-text"></p>
+                <p id="feedback-summary"></p>
+            </div>
         </main>
 
         <footer class="quiz-footer">
             <p>&copy; 2025 Cagut Pro. Intenta tu mejor esfuerzo.</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizForm = document.getElementById('quizForm');
+            const progressBar = document.getElementById('progressBar');
+            const resultsContainer = document.getElementById('results-container');
+            const scoreText = document.getElementById('score-text');
+            const feedbackSummary = document.getElementById('feedback-summary');
+
+            const correctAnswers = {
+                q1: 'verdadero',
+                q2: 'b',
+                q3: 'c',
+                q4: ['7-9', '7 a 9', '7 y 9'], 
+                q5: 'c',
+                q6: 'falso',
+                q7: ['a', 'c', 'd'],
+                q8: 'b',
+                q9: 'any' 
+            };
+
+            const totalQuestions = Object.keys(correctAnswers).length;
+            let questionsAnswered = 0;
+
+            quizForm.addEventListener('change', () => {
+                const formData = new FormData(quizForm);
+                let answeredCount = 0;
+                if (formData.get('q1')) answeredCount++;
+                if (formData.get('q2')) answeredCount++;
+                if (formData.get('q3')) answeredCount++;
+                if (formData.get('q4') && formData.get('q4').trim() !== '') answeredCount++;
+                if (formData.get('q5')) answeredCount++;
+                if (formData.get('q6')) answeredCount++;
+                
+                const q7Checkboxes = document.querySelectorAll('input[name="q7"]:checked');
+                if (q7Checkboxes.length > 0) answeredCount++;
+                
+                if (formData.get('q8')) answeredCount++;
+                if (formData.get('q9') && formData.get('q9').trim() !== '') answeredCount++;
+
+                questionsAnswered = answeredCount;
+                const progress = (questionsAnswered / totalQuestions) * 100;
+                progressBar.style.width = progress + '%';
+                // No textContent for progressBar due to small height in new CSS
+            });
+
+
+            quizForm.addEventListener('submit', function (event) {
+                event.preventDefault(); 
+
+                let score = 0;
+                const formData = new FormData(quizForm);
+
+                document.querySelectorAll('.question-block').forEach(qb => {
+                    qb.classList.remove('correct-answer', 'incorrect-answer');
+                });
+                document.querySelectorAll('.feedback-text').forEach(ft => ft.innerHTML = '');
+                document.querySelectorAll('.option-label').forEach(ol => {
+                    ol.classList.remove('correct-choice', 'incorrect-choice-selected');
+                });
+
+                // --- Question 1 ---
+                const q1UserAnswer = formData.get('q1');
+                const q1Block = document.getElementById('qb1');
+                const f1 = document.getElementById('f1');
+                if (q1UserAnswer === correctAnswers.q1) {
+                    score++;
+                    q1Block.classList.add('correct-answer');
+                    f1.textContent = '¡Correcto!';
+                    f1.className = 'feedback-text correct-feedback';
+                } else if (q1UserAnswer) {
+                    q1Block.classList.add('incorrect-answer');
+                    f1.textContent = `Incorrecto. La respuesta correcta es: ${correctAnswers.q1.charAt(0).toUpperCase() + correctAnswers.q1.slice(1)}.`;
+                    f1.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q1Block.classList.add('incorrect-answer');
+                    f1.textContent = 'No has respondido esta pregunta.';
+                    f1.className = 'feedback-text incorrect-feedback';
+                }
+                highlightOption('q1', q1UserAnswer, correctAnswers.q1);
+
+                // --- Question 2 ---
+                const q2UserAnswer = formData.get('q2');
+                const q2Block = document.getElementById('qb2');
+                const f2 = document.getElementById('f2');
+                if (q2UserAnswer === correctAnswers.q2) {
+                    score++;
+                    q2Block.classList.add('correct-answer');
+                    f2.textContent = '¡Correcto!';
+                     f2.className = 'feedback-text correct-feedback';
+                } else if (q2UserAnswer) {
+                    q2Block.classList.add('incorrect-answer');
+                    const correctLabel = document.querySelector(`input[name="q2"][value="${correctAnswers.q2}"]`).nextElementSibling.textContent;
+                    f2.textContent = `Incorrecto. La respuesta correcta es: ${correctLabel}.`;
+                     f2.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q2Block.classList.add('incorrect-answer');
+                    f2.textContent = 'No has respondido esta pregunta.';
+                     f2.className = 'feedback-text incorrect-feedback';
+                }
+                 highlightOption('q2', q2UserAnswer, correctAnswers.q2);
+
+                // --- Question 3 ---
+                const q3UserAnswer = formData.get('q3');
+                const q3Block = document.getElementById('qb3');
+                const f3 = document.getElementById('f3');
+                if (q3UserAnswer === correctAnswers.q3) {
+                    score++;
+                    q3Block.classList.add('correct-answer');
+                    f3.textContent = '¡Correcto!';
+                    f3.className = 'feedback-text correct-feedback';
+                } else if (q3UserAnswer) {
+                    q3Block.classList.add('incorrect-answer');
+                    const correctLabel = document.querySelector(`input[name="q3"][value="${correctAnswers.q3}"]`).nextElementSibling.textContent;
+                    f3.textContent = `Incorrecto. La respuesta correcta es: ${correctLabel}.`;
+                    f3.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q3Block.classList.add('incorrect-answer');
+                    f3.textContent = 'No has respondido esta pregunta.';
+                     f3.className = 'feedback-text incorrect-feedback';
+                }
+                highlightOption('q3', q3UserAnswer, correctAnswers.q3);
+
+                // --- Question 4 ---
+                const q4UserAnswer = formData.get('q4')?.trim().toLowerCase();
+                const q4Block = document.getElementById('qb4');
+                const f4 = document.getElementById('f4');
+                let q4Correct = false;
+                if (q4UserAnswer) {
+                    correctAnswers.q4.forEach(ans => {
+                        if (q4UserAnswer.includes(ans)) {
+                            q4Correct = true;
+                        }
+                    });
+                }
+
+                if (q4Correct) {
+                    score++;
+                    q4Block.classList.add('correct-answer');
+                    f4.textContent = '¡Correcto! Se recomiendan entre 7 y 9 horas.';
+                    f4.className = 'feedback-text correct-feedback';
+                } else if (q4UserAnswer) {
+                    q4Block.classList.add('incorrect-answer');
+                    f4.textContent = 'Incorrecto. La respuesta usualmente aceptada es entre 7 y 9 horas.';
+                    f4.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q4Block.classList.add('incorrect-answer');
+                    f4.textContent = 'No has respondido esta pregunta.';
+                     f4.className = 'feedback-text incorrect-feedback';
+                }
+
+                // --- Question 5 ---
+                const q5UserAnswer = formData.get('q5');
+                const q5Block = document.getElementById('qb5');
+                const f5 = document.getElementById('f5');
+                if (q5UserAnswer === correctAnswers.q5) {
+                    score++;
+                    q5Block.classList.add('correct-answer');
+                    f5.textContent = '¡Correcto!';
+                    f5.className = 'feedback-text correct-feedback';
+                } else if (q5UserAnswer) {
+                    q5Block.classList.add('incorrect-answer');
+                    const correctLabel = document.querySelector(`input[name="q5"][value="${correctAnswers.q5}"]`).nextElementSibling.textContent;
+                    f5.textContent = `Incorrecto. La respuesta correcta es: ${correctLabel}.`;
+                    f5.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q5Block.classList.add('incorrect-answer');
+                    f5.textContent = 'No has respondido esta pregunta.';
+                     f5.className = 'feedback-text incorrect-feedback';
+                }
+                highlightOption('q5', q5UserAnswer, correctAnswers.q5);
+
+                // --- Question 6 ---
+                const q6UserAnswer = formData.get('q6');
+                const q6Block = document.getElementById('qb6');
+                const f6 = document.getElementById('f6');
+                if (q6UserAnswer === correctAnswers.q6) {
+                    score++;
+                    q6Block.classList.add('correct-answer');
+                    f6.textContent = '¡Correcto! Las siestas largas pueden causar inercia del sueño.';
+                    f6.className = 'feedback-text correct-feedback';
+                } else if (q6UserAnswer) {
+                    q6Block.classList.add('incorrect-answer');
+                    f6.textContent = `Incorrecto. La respuesta correcta es: ${correctAnswers.q6.charAt(0).toUpperCase() + correctAnswers.q6.slice(1)}.`;
+                    f6.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q6Block.classList.add('incorrect-answer');
+                    f6.textContent = 'No has respondido esta pregunta.';
+                     f6.className = 'feedback-text incorrect-feedback';
+                }
+                highlightOption('q6', q6UserAnswer, correctAnswers.q6);
+
+                // --- Question 7 ---
+                const q7UserAnswers = formData.getAll('q7'); 
+                const q7Block = document.getElementById('qb7');
+                const f7 = document.getElementById('f7');
+                const sortedUserAnswersQ7 = [...q7UserAnswers].sort();
+                const sortedCorrectAnswersQ7 = [...correctAnswers.q7].sort();
+
+                if (JSON.stringify(sortedUserAnswersQ7) === JSON.stringify(sortedCorrectAnswersQ7)) {
+                    score++;
+                    q7Block.classList.add('correct-answer');
+                    f7.textContent = '¡Correcto!';
+                    f7.className = 'feedback-text correct-feedback';
+                } else if (q7UserAnswers.length > 0) {
+                    q7Block.classList.add('incorrect-answer');
+                    const correctLabels = correctAnswers.q7.map(val => document.querySelector(`input[name="q7"][value="${val}"]`).nextElementSibling.textContent).join(', ');
+                    f7.textContent = `Incorrecto. Las respuestas correctas son: ${correctLabels}.`;
+                    f7.className = 'feedback-text incorrect-feedback';
+                } else {
+                    q7Block.classList.add('incorrect-answer');
+                    f7.textContent = 'No has respondido esta pregunta.';
+                    f7.className = 'feedback-text incorrect-feedback';
+                }
+                document.querySelectorAll('input[name="q7"]').forEach(checkbox => {
+                    const label = checkbox.nextElementSibling;
+                    if (correctAnswers.q7.includes(checkbox.value)) {
+                        label.classList.add('correct-choice');
+                    }
+                    if (checkbox.checked && !correctAnswers.q7.includes(checkbox.value)) {
+                        label.classList.add('incorrect-choice-selected');
+                    }
+                });
+
+                // --- Question 8 ---
+                const q8UserAnswer = formData.get('q8');
+                const q8Block = document.getElementById('qb8');
+                const f8 = document.getElementById('f8');
+                if (q8UserAnswer === correctAnswers.q8) {
+                    score++;
+                    q8Block.classList.add('correct-answer');
+                    f8.textContent = '¡Correcto!';
+                    f8.className = 'feedback-text correct-feedback';
+                } else if (q8UserAnswer) {
+                    q8Block.classList.add('incorrect-answer');
+                     const correctLabel = document.querySelector(`input[name="q8"][value="${correctAnswers.q8}"]`).nextElementSibling.textContent;
+                    f8.textContent = `Incorrecto. La respuesta correcta es: ${correctLabel}.`;
+                    f8.className = 'feedback-text incorrect-feedback';
+                } else {
+                     q8Block.classList.add('incorrect-answer');
+                    f8.textContent = 'No has respondido esta pregunta.';
+                     f8.className = 'feedback-text incorrect-feedback';
+                }
+                 highlightOption('q8', q8UserAnswer, correctAnswers.q8);
+
+                // --- Question 9 ---
+                const q9UserAnswer = formData.get('q9')?.trim();
+                const q9Block = document.getElementById('qb9');
+                const f9 = document.getElementById('f9');
+                if (q9UserAnswer && q9UserAnswer !== '') { 
+                    if (correctAnswers.q9 === 'any') { 
+                        score++; 
+                        q9Block.classList.add('correct-answer');
+                        f9.textContent = '¡Gracias por tu respuesta! Algunas técnicas incluyen: mantener un horario, evitar cafeína, crear un ambiente relajante.';
+                        f9.className = 'feedback-text correct-feedback';
+                    }
+                } else {
+                    q9Block.classList.add('incorrect-answer');
+                    f9.textContent = 'No has respondido esta pregunta. Un ejemplo: "Evitar cafeína por la noche."';
+                    f9.className = 'feedback-text incorrect-feedback';
+                }
+
+                progressBar.style.width = '100%';
+                // No textContent for progressBar
+                
+                scoreText.textContent = `Tu puntuación: ${score} de ${totalQuestions}`;
+                if (score === totalQuestions) {
+                    feedbackSummary.textContent = '¡Excelente! ¡Conoces muy bien sobre el sueño!';
+                } else if (score >= totalQuestions / 2) {
+                    feedbackSummary.textContent = '¡Buen trabajo! Sigue aprendiendo sobre la importancia del sueño.';
+                } else {
+                    feedbackSummary.textContent = 'Puedes mejorar. ¡Revisa las respuestas e inténtalo de nuevo!';
+                }
+                resultsContainer.style.display = 'block';
+                resultsContainer.scrollIntoView({ behavior: 'smooth' }); 
+            });
+
+            function highlightOption(questionName, userAnswer, correctAnswerValue) {
+                const options = document.querySelectorAll(`input[name="${questionName}"]`);
+                options.forEach(option => {
+                    const label = option.nextElementSibling;
+                    if (option.value === correctAnswerValue) {
+                        label.classList.add('correct-choice');
+                    }
+                    if (option.checked && option.value !== correctAnswerValue) {
+                        label.classList.add('incorrect-choice-selected');
+                    }
+                });
+            }
+
+        });
+    </script>
 </body>
 </html>
