@@ -297,27 +297,32 @@ document.getElementById("quizForm").addEventListener("submit", function (event) 
     if (q10.includes("b") && q10.length === 1) score++;
 
     // Mostrar resultado
-    const finalBox = document.querySelector('.final-box');
-    const overlay = document.getElementById('overlay');
+   // Mostrar resultado
+const finalBox = document.querySelector('.final-box');
+const overlay = document.getElementById('overlay');
 
-    finalBox.innerHTML = `
-        <h2>Resultado Final</h2>
-        <p class="result-message">Has acertado <strong>${score}</strong> de <strong>10</strong> preguntas.</p>
-        <p class="result-detail">${score >= 5 ? "✅ ¡Has aprobado! ¡Buen trabajo!" : "❌ Has suspendido. ¡Sigue practicando!"}</p>
-        <button id="closeResult" class="submit-button" style="margin-top:20px;">Cerrar</button>
-    `;
+const detailClass = score >= 5 ? 'aprobado-text' : 'suspendido-text';
+const detailMessage = score >= 5 ? '✅ ¡Has aprobado! ¡Buen trabajo!' : '❌ Has suspendido. ¡Sigue practicando!';
 
-    finalBox.style.display = "block";
-    overlay.style.display = "block";
+finalBox.innerHTML = `
+    <h2>Resultado Final</h2>
+    <p class="result-message">Has acertado <strong>${score}</strong> de <strong>10</strong> preguntas.</p>
+    <p class="result-detail ${detailClass}">${detailMessage}</p>
+    <button id="closeResult" class="submit-button" style="margin-top:20px;">Cerrar</button>
+`;
 
-    // Scroll al resultado
-    finalBox.scrollIntoView({ behavior: "smooth" });
+finalBox.style.display = "block";
+overlay.style.display = "block";
 
-    // Cierre del resultado
-    document.getElementById("closeResult").addEventListener("click", () => {
-        finalBox.style.display = "none";
-        overlay.style.display = "none";
-    });
+// Scroll al resultado
+finalBox.scrollIntoView({ behavior: "smooth" });
+
+// Cierre del resultado
+document.getElementById("closeResult").addEventListener("click", () => {
+    finalBox.style.display = "none";
+    overlay.style.display = "none";
+});
+
 });
 </script>
 
