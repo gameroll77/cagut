@@ -221,12 +221,6 @@
         </div>
 
     <script>
-        const totalQuestions = 10;
-        const RespotesCorrectes = 0;
-
-
-
-
 
         function updateProgressBar() {
             let answeredCount = 0;
@@ -255,5 +249,65 @@
 
         window.addEventListener('DOMContentLoaded', updateProgressBar);
     </script>
+    <script>
+    document.getElementById("quizForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita recargar la página
+
+        let score = 0;
+
+        // Pregunta 1
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        if (q1 && (q1.value === "a" || q1.value === "b")) score++;
+
+        // Pregunta 2
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        if (q2 && q2.value === "true") score++;
+
+        // Pregunta 3 (checkbox): Pechuga de pollo
+        const q3 = Array.from(document.querySelectorAll('input[name="q3"]:checked')).map(cb => cb.value);
+        if (q3.includes("b") && q3.length === 1) score++;
+
+        // Pregunta 4: Frutas y verduras al menos 5 veces al día
+        const q4 = document.querySelector('input[name="q4"]').value.trim();
+        if (q4 === "5" || q4.toLowerCase() === "cinco") score++;
+
+        // Pregunta 5: Fibra - buscamos palabras clave
+        const q5 = document.querySelector('textarea[name="q5"]').value.toLowerCase();
+        if (q5.includes("fibra") || q5.includes("digestión") || q5.includes("intestino")) score++;
+
+        // Pregunta 6: Aceite de oliva
+        const q6 = Array.from(document.querySelectorAll('input[name="q6"]:checked')).map(cb => cb.value);
+        if (q6.includes("b") && q6.length === 1) score++;
+
+        // Pregunta 7: Verdadero
+        const q7 = document.querySelector('input[name="q7"]:checked');
+        if (q7 && q7.value === "true") score++;
+
+        // Pregunta 8: Verdadero
+        const q8 = document.querySelector('input[name="q8"]:checked');
+        if (q8 && q8.value === "true") score++;
+
+        // Pregunta 9: Agua (2 litros mínimo)
+        const q9 = document.querySelector('textarea[name="q9"]').value.trim().toLowerCase();
+        if (q9.includes("2") || q9.includes("dos")) score++;
+
+        // Pregunta 10: Pan integral
+        const q10 = Array.from(document.querySelectorAll('input[name="q10"]:checked')).map(cb => cb.value);
+        if (q10.includes("b") && q10.length === 1) score++;
+
+        // Mostrar resultado
+        const finalBox = document.querySelector('.final-box');
+        finalBox.style.display = "block";
+        finalBox.innerHTML = `
+            <h2>Resultado Final</h2>
+            <p class="result-message">Has acertado <strong>${score}</strong> de <strong>10</strong> preguntas.</p>
+            <p class="result-detail">${score >= 5 ? "✅ ¡Has aprobado! ¡Buen trabajo!" : "❌ Has suspendido. ¡Sigue practicando!"}</p>
+        `;
+
+        // Scroll al final para ver resultados
+        finalBox.scrollIntoView({ behavior: "smooth" });
+    });
+</script>
+
 </body>
 </html>
