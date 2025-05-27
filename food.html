@@ -1,109 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Gimnasio - Preguntas</title>
-    <link rel="stylesheet" href="example.css"> <link rel="stylesheet" href="quiz-style.css"> </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Alimentación</title>
+  <link rel="stylesheet" href="food.css">
+</head>
 <body>
-    <div class="quiz-main-container">
-        <header class="quiz-header">
-            <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
-            <h1>Quiz: Gimnasio</h1>
-            <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
-            <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 10%;"></div> </div>
-        </header>
+  <div class="quiz-main-container">
+    <header class="quiz-header">
+      <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
+      <h1>Quiz: Alimentación</h1>
+      <p class="quiz-subtitle">Pon a prueba tus conocimientos sobre hábitos alimenticios.</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+      </div>
+    </header>
 
-        <main class="quiz-content">
-            <form id="quizForm">
+    <main class="quiz-content">
+      <form id="quizForm">
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 1: Opción Múltiple</h2>
-                    <p class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit nulla quis lorem whakawhiti?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q1" value="a">
-                            <span class="option-label">Opción A: Lorem ipsum dolor.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="b">
-                            <span class="option-label">Opción B: Consectetur adipiscing.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="c">
-                            <span class="option-label">Opción C: Quisque nec erat.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="d">
-                            <span class="option-label">Opción D: Integer blandit.</span>
-                        </label>
-                    </div>
-                </div>
+        <!-- Pregunta 1 -->
+        <img src="images/frutas.jpg" class="qimage" alt="Frutas frescas">
+        <div class="question-block" id="qb1">
+          <h2 class="question-title">Pregunta 1: Verdadero o Falso</h2>
+          <p class="question-text">Consumir frutas y verduras diariamente es esencial para una dieta equilibrada.</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q1" value="verdadero"> Verdadero</label>
+            <label class="option"><input type="radio" name="q1" value="falso"> Falso</label>
+          </div>
+          <div class="feedback-text" id="f1"></div>
+        </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 2: Verdadero o Falso</h2>
-                    <p class="question-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q2" value="true">
-                            <span class="option-label">Verdadero</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q2" value="false">
-                            <span class="option-label">Falso</span>
-                        </label>
-                    </div>
-                </div>
+        <!-- Pregunta 2 -->
+        <img src="images/agua.jpg" class="qimage" alt="Vaso de agua">
+        <div class="question-block" id="qb2">
+          <h2 class="question-title">Pregunta 2: Opción Múltiple</h2>
+          <p class="question-text">¿Cuánta agua se recomienda consumir diariamente para un adulto promedio?</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q2" value="a"> 500 ml</label>
+            <label class="option"><input type="radio" name="q2" value="b"> 2 litros</label>
+            <label class="option"><input type="radio" name="q2" value="c"> 4 litros</label>
+            <label class="option"><input type="radio" name="q2" value="d"> Depende de la edad y peso</label>
+          </div>
+          <div class="feedback-text" id="f2"></div>
+        </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 3: Selección Múltiple</h2>
-                    <p class="question-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="a">
-                            <span class="option-label">Opción Alpha: Neque porro quisquam.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="b">
-                            <span class="option-label">Opción Beta: Est qui dolorem ipsum.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="c">
-                            <span class="option-label">Opción Gamma: Quia dolor sit amet.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="d">
-                            <span class="option-label">Opción Delta: Consectetur, adipisci velit.</span>
-                        </label>
-                    </div>
-                </div>
+        <!-- Pregunta 3 -->
+        <img src="images/frituras.jpg" class="qimage" alt="Comida frita">
+        <div class="question-block" id="qb3">
+          <h2 class="question-title">Pregunta 3: Selección Múltiple</h2>
+          <p class="question-text">¿Qué alimentos se deben limitar para mantener una alimentación saludable?</p>
+          <div class="options-group">
+            <label class="option"><input type="checkbox" name="q3" value="a"> Frituras</label>
+            <label class="option"><input type="checkbox" name="q3" value="b"> Frutas frescas</label>
+            <label class="option"><input type="checkbox" name="q3" value="c"> Bebidas azucaradas</label>
+            <label class="option"><input type="checkbox" name="q3" value="d"> Verduras de hoja verde</label>
+          </div>
+          <div class="feedback-text" id="f3"></div>
+        </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 4: Rellenar el Espacio</h2>
-                    <p class="question-text">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum ________ atque corrupti quos dolores."</p>
-                    <div class="input-group">
-                        <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
-                    </div>
-                </div>
+        <!-- Pregunta 4 -->
+        <img src="images/plato.png" class="qimage" alt="Plato saludable">
+        <div class="question-block" id="qb4">
+          <h2 class="question-title">Pregunta 4: Respuesta Corta</h2>
+          <p class="question-text">¿Cuál es la proporción recomendada de verduras en un plato saludable?</p>
+          <div class="input-group">
+            <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
+          </div>
+          <div class="feedback-text" id="f4"></div>
+        </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 5: Respuesta Corta</h2>
-                    <p class="question-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Explica brevemente.</p>
-                    <div class="input-group">
-                        <textarea name="q5" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
-                    </div>
-                </div>
+        <!-- Pregunta 5 -->
+        <div class="question-block" id="qb5">
+          <h2 class="question-title">Pregunta 5: Verdadero o Falso</h2>
+          <p class="question-text">Saltarse el desayuno ayuda a controlar mejor el peso corporal.</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q5" value="verdadero"> Verdadero</label>
+            <label class="option"><input type="radio" name="q5" value="falso"> Falso</label>
+          </div>
+          <div class="feedback-text" id="f5"></div>
+        </div>
 
-                <div class="quiz-navigation">
-                    <button type="submit" class="submit-button">Enviar Respuestas</button>
-                    </div>
-            </form>
-        </main>
+        <!-- Pregunta 6 -->
+        <img src="images/granos.jpg" class="qimage" alt="Granos integrales">
+        <div class="question-block" id="qb6">
+          <h2 class="question-title">Pregunta 6: Opción Múltiple</h2>
+          <p class="question-text">¿Cuál de los siguientes alimentos es una buena fuente de fibra?</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q6" value="a"> Granos integrales</label>
+            <label class="option"><input type="radio" name="q6" value="b"> Refrescos</label>
+            <label class="option"><input type="radio" name="q6" value="c"> Dulces</label>
+            <label class="option"><input type="radio" name="q6" value="d"> Aceites vegetales</label>
+          </div>
+          <div class="feedback-text" id="f6"></div>
+        </div>
 
-        <footer class="quiz-footer">
-            <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
-        </footer>
-    </div>
+        <!-- Pregunta 7 -->
+        <div class="question-block" id="qb7">
+          <h2 class="question-title">Pregunta 7: Selección Múltiple</h2>
+          <p class="question-text">¿Cuáles son beneficios de una alimentación equilibrada? (Selecciona todas las que correspondan)</p>
+          <div class="options-group">
+            <label class="option"><input type="checkbox" name="q7" value="a"> Mejora el estado de ánimo</label>
+            <label class="option"><input type="checkbox" name="q7" value="b"> Aumenta el riesgo de enfermedades</label>
+            <label class="option"><input type="checkbox" name="q7" value="c"> Mantiene un peso saludable</label>
+            <label class="option"><input type="checkbox" name="q7" value="d"> Mejora el rendimiento físico</label>
+          </div>
+          <div class="feedback-text" id="f7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <img src="images/azucar.jpg" class="qimage" alt="Azúcar">
+        <div class="question-block" id="qb8">
+          <h2 class="question-title">Pregunta 8: Opción Múltiple</h2>
+          <p class="question-text">¿Cuál es una alternativa más saludable al azúcar refinado?</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q8" value="a"> Miel natural</label>
+            <label class="option"><input type="radio" name="q8" value="b"> Refrescos dietéticos</label>
+            <label class="option"><input type="radio" name="q8" value="c"> Jarabe de maíz alto en fructosa</label>
+            <label class="option"><input type="radio" name="q8" value="d"> Azúcar moreno procesado</label>
+          </div>
+          <div class="feedback-text" id="f8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question-block" id="qb9">
+          <h2 class="question-title">Pregunta 9: Respuesta Corta</h2>
+          <p class="question-text">Menciona una estrategia para reducir el consumo de sal en las comidas.</p>
+          <div class="input-group">
+            <textarea name="q9" rows="3" placeholder="Tu respuesta aquí..." class="text-input"></textarea>
+          </div>
+          <div class="feedback-text" id="f9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question-block" id="qb10">
+          <h2 class="question-title">Pregunta 10: Verdadero o Falso</h2>
+          <p class="question-text">Los alimentos ultraprocesados suelen contener más aditivos y grasas trans.</p>
+          <div class="options-group">
+            <label class="option"><input type="radio" name="q10" value="verdadero"> Verdadero</label>
+            <label class="option"><input type="radio" name="q10" value="falso"> Falso</label>
+          </div>
+          <div class="feedback-text" id="f10"></div>
+        </div>
+
+        <!-- Botón Enviar -->
+        <div class="quiz-navigation">
+          <button type="submit" class="submit-button">Enviar Respuestas</button>
+        </div>
+      </form>
+
+      <div id="results-container" style="display: none;">
+        <h2>Resultados del Quiz</h2>
+        <p id="score-text"></p>
+        <p id="feedback-summary"></p>
+      </div>
+    </main>
+
+    <footer class="quiz-footer">
+      <p>&copy; 2025 Cagut Pro. ¡Cuida tu salud con buena alimentación!</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const quizForm = document.getElementById('quizForm');
+    const progressBar = document.getElementById('progressBar');
+    const resultsContainer = document.getElementById('results-container');
+    const scoreText = document.getElementById('score-text');
+    const feedbackSummary = document.getElementById('feedback-summary');
+
+    // Respuestas correctas para preguntas 4-10, acorde a tu HTML
+    const correctAnswers = {
+        q4: ['verdaderas', 'verdadera', 'verdad', 'verduras', 'al menos la mitad'], // ejemplo para respuesta corta: algo aceptable
+        q5: 'falso', // "Saltarse el desayuno ayuda a controlar mejor el peso corporal" => falso
+        q6: 'a', // Granos integrales es buena fuente de fibra
+        q7: ['a', 'c', 'd'], // beneficios: mejora estado ánimo, mantiene peso, mejora rendimiento físico
+        q8: 'a', // alternativa saludable al azúcar refinado: miel natural
+        q9: 'any', // cualquier respuesta valida (texto libre)
+        q10: 'verdadero' // ultraprocesados tienen más aditivos y grasas trans
+    };
+
+    const totalQuestions = Object.keys(correctAnswers).length;
+
+    quizForm.addEventListener('change', () => {
+        const formData = new FormData(quizForm);
+        let answeredCount = 0;
+        ['q4','q5','q6','q7','q8','q9','q10'].forEach(q => {
+            if(q==='q7'){
+                if(document.querySelectorAll('input[name="q7"]:checked').length>0) answeredCount++;
+            } else {
+                const val = formData.get(q);
+                if(val && val.trim() !== '') answeredCount++;
+            }
+        });
+        const progress = (answeredCount / totalQuestions) * 100;
+        progressBar.style.width = progress + '%';
+    });
+
+    quizForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let score = 0;
+        const formData = new FormData(quizForm);
+
+        // limpiar clases y feedback previos
+        document.querySelectorAll('.question-block').forEach(qb => qb.classList.remove('correct-answer','incorrect-answer'));
+        document.querySelectorAll('.feedback-text').forEach(fb => fb.textContent = '');
+        document.querySelectorAll('.option').forEach(label => label.classList.remove('correct-choice','incorrect-choice-selected'));
+
+        // Pregunta 4 - respuesta corta (proporción verduras en plato)
+        const q4Answer = formData.get('q4')?.toLowerCase() || '';
+        const q4Block = document.getElementById('qb4');
+        const f4 = document.getElementById('f4');
+        let q4Correct = correctAnswers.q4.some(ans => q4Answer.includes(ans));
+        if(q4Answer){
+            if(q4Correct){
+                score++;
+                q4Block.classList.add('correct-answer');
+                f4.textContent = '¡Correcto! La proporción recomendada es al menos la mitad del plato en verduras.';
+                f4.className = 'feedback-text correct-feedback';
+            } else {
+                q4Block.classList.add('incorrect-answer');
+                f4.textContent = 'Incorrecto. La recomendación es que al menos la mitad del plato sean verduras.';
+                f4.className = 'feedback-text incorrect-feedback';
+            }
+        } else {
+            q4Block.classList.add('incorrect-answer');
+            f4.textContent = 'No has respondido esta pregunta.';
+            f4.className = 'feedback-text incorrect-feedback';
+        }
+
+        // Pregunta 5 - Verdadero/Falso
+        checkSingleChoice('q5', correctAnswers.q5, 'qb5', 'f5');
+
+        // Pregunta 6 - Opción múltiple
+        checkSingleChoice('q6', correctAnswers.q6, 'qb6', 'f6');
+
+        // Pregunta 7 - Selección múltiple
+        const q7UserAnswers = formData.getAll('q7').sort();
+        const q7Block = document.getElementById('qb7');
+        const f7 = document.getElementById('f7');
+        const correctQ7Sorted = [...correctAnswers.q7].sort();
+        if(q7UserAnswers.length){
+            if(JSON.stringify(q7UserAnswers) === JSON.stringify(correctQ7Sorted)){
+                score++;
+                q7Block.classList.add('correct-answer');
+                f7.textContent = '¡Correcto!';
+                f7.className = 'feedback-text correct-feedback';
+            } else {
+                q7Block.classList.add('incorrect-answer');
+                const correctLabels = correctAnswers.q7.map(val => {
+                    const label = document.querySelector(`input[name="q7"][value="${val}"]`).parentNode.textContent.trim();
+                    return label;
+                }).join(', ');
+                f7.textContent = `Incorrecto. Las respuestas correctas son: ${correctLabels}.`;
+                f7.className = 'feedback-text incorrect-feedback';
+            }
+        } else {
+            q7Block.classList.add('incorrect-answer');
+            f7.textContent = 'No has respondido esta pregunta.';
+            f7.className = 'feedback-text incorrect-feedback';
+        }
+        // marcar opciones correctas e incorrectas
+        document.querySelectorAll('input[name="q7"]').forEach(chk => {
+            const label = chk.parentNode;
+            if(correctAnswers.q7.includes(chk.value)) label.classList.add('correct-choice');
+            if(chk.checked && !correctAnswers.q7.includes(chk.value)) label.classList.add('incorrect-choice-selected');
+        });
+
+        // Pregunta 8 - Opción múltiple
+        checkSingleChoice('q8', correctAnswers.q8, 'qb8', 'f8');
+
+        // Pregunta 9 - Respuesta corta libre
+        const q9Answer = formData.get('q9')?.trim();
+        const q9Block = document.getElementById('qb9');
+        const f9 = document.getElementById('f9');
+        if(q9Answer && q9Answer.length > 0){
+            score++;
+            q9Block.classList.add('correct-answer');
+            f9.textContent = '¡Gracias por tu respuesta!';
+            f9.className = 'feedback-text correct-feedback';
+        } else {
+            q9Block.classList.add('incorrect-answer');
+            f9.textContent = 'No has respondido esta pregunta.';
+            f9.className = 'feedback-text incorrect-feedback';
+        }
+
+        // Pregunta 10 - Verdadero/Falso
+        checkSingleChoice('q10', correctAnswers.q10, 'qb10', 'f10');
+
+        progressBar.style.width = '100%';
+        scoreText.textContent = `Tu puntuación: ${score} de ${totalQuestions}`;
+
+        if(score === totalQuestions){
+            feedbackSummary.textContent = '¡Excelente! ¡Conoces muy bien sobre alimentación saludable!';
+        } else if(score >= totalQuestions / 2){
+            feedbackSummary.textContent = '¡Buen trabajo! Sigue aprendiendo sobre la importancia de una buena alimentación.';
+        } else {
+            feedbackSummary.textContent = 'Puedes mejorar. ¡Revisa las respuestas e inténtalo de nuevo!';
+        }
+
+        resultsContainer.style.display = 'block';
+        resultsContainer.scrollIntoView({behavior: 'smooth'});
+
+    });
+
+    function checkSingleChoice(qName, correctVal, blockId, feedbackId){
+        const userAnswer = new FormData(quizForm).get(qName);
+        const block = document.getElementById(blockId);
+        const feedback = document.getElementById(feedbackId);
+        if(userAnswer){
+            if(userAnswer === correctVal){
+                block.classList.add('correct-answer');
+                feedback.textContent = '¡Correcto!';
+                feedback.className = 'feedback-text correct-feedback';
+            } else {
+                block.classList.add('incorrect-answer');
+                const correctLabel = document.querySelector(`input[name="${qName}"][value="${correctVal}"]`).parentNode.textContent.trim();
+                feedback.textContent = `Incorrecto. La respuesta correcta es: ${correctLabel}.`;
+                feedback.className = 'feedback-text incorrect-feedback';
+            }
+        } else {
+            block.classList.add('incorrect-answer');
+            feedback.textContent = 'No has respondido esta pregunta.';
+            feedback.className = 'feedback-text incorrect-feedback';
+        }
+
+        // destacar opciones
+        document.querySelectorAll(`input[name="${qName}"]`).forEach(input => {
+            const label = input.parentNode;
+            if(input.value === correctVal) label.classList.add('correct-choice');
+            if(input.checked && input.value !== correctVal) label.classList.add('incorrect-choice-selected');
+        });
+    }
+});
+
+    </script>
 </body>
 </html>
