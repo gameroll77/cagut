@@ -175,3 +175,13 @@ body {
     color: #a0a0d0;
     font-size: 0.9em;
 }
+.imagen-pregunta {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
