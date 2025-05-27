@@ -214,7 +214,7 @@ body {
     border-radius: 12px;
     padding: 30px 20px;
     text-align: center;
-    color: #ffffff;
+    color: #4a4a7a;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -228,7 +228,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
 }
 
 .result-detail {
