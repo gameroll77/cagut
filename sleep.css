@@ -26,7 +26,7 @@ body {
     margin-bottom: 2vh;
     border-radius: 10px;
     box-shadow: 0px 4px 12px 0px #5a5a8a;
-    max-height: 300px; /* Ajustado para que no sea demasiado grande */
+    max-height: 301px; /* Ajustado para que no sea demasiado grande */
     max-width: 90%;   /* Que no exceda el contenedor de pregunta */
     width: auto;      /* Mantiene la proporción */
     height: auto;     /* Mantiene la proporción */
