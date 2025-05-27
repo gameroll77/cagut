@@ -209,18 +209,18 @@ body {
     z-index: 999;
     max-width: 500px;
     width: 90%;
-    background-color: #353560;
+    background-color: #2e2e6d !important;
     border: 2px solid #4caf50;
     border-radius: 12px;
     padding: 30px 20px;
     text-align: center;
-    color: #4a4a7a;
+    color: #ffffff !important;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .final-box h2 {
     font-size: 1.8rem;
-    color: #4caf50;
+    color: #4caf50; /* Verde para el título */
     margin-bottom: 15px;
 }
 
@@ -228,10 +228,10 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff; /* Texto blanco */
 }
 
 .result-detail {
     font-size: 1.1rem;
-    color: #dddddd;
+    color: #f0f0f0; /* Blanco suave */
 }
