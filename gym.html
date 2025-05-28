@@ -272,5 +272,63 @@
             <p>&copy; 2025 QuizMaster Pro. ¡Da lo mejor de ti!</p>
         </footer>
     </div>
+    <script>
+        const respuestasCorrectas = {
+            q1: "c",
+            q2: "c",
+            q3: "b",
+            q4: "c",
+            q5: "c",
+            q6: "b",
+            q7: "a",
+            q8: "a",
+            q9: "b",
+            q10: "b",
+            q11: "b",
+            q12: "b",
+            q13: "a",
+            q14: "b",
+            q15: "c",
+            q16: "b",
+            q17: "b",
+            q18: "a",
+            q19: "a",
+            q20: "b"
+        };
+
+        document.getElementById('formularioQuiz').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let total = Object.keys(respuestasCorrectas).length;
+            let aciertos = 0;
+            let incompletas = [];
+
+            for (let key in respuestasCorrectas) {
+            const opciones = document.getElementsByName(key);
+            let marcada = false;
+
+            for (let opcion of opciones) {
+                if (opcion.checked) {
+                marcada = true;
+                if (opcion.value === respuestasCorrectas[key]) {
+                    aciertos++;
+                }
+                }
+            }
+
+            if (!marcada) {
+                incompletas.push(key);
+            }
+            }
+
+            if (incompletas.length > 0) {
+            alert("Por favor responde todas las preguntas antes de enviar.");
+            return;
+            }
+
+            alert(`Has acertado ${aciertos} de ${total} preguntas.\n${aciertos >= 15 ? "¡Muy bien hecho!" : "Sigue practicando y mejorarás 💪🏼"}`);
+        });
+</script>
+
 </body>
 </html>
