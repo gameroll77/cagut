@@ -266,69 +266,67 @@
                 </div>
                 <button type="submit" class="boton-enviar">Enviar Respuestas</button>
             </form>
+            <div id="resultado" class="resultado-final" style="display: none;">
+                <h2>Resultado del Quiz</h2>
+                <p id="mensajeResultado"></p>
+            </div>
+
         </main>
 
         <footer class="pie-quiz">
             <p>&copy; 2025 QuizMaster Pro. ¡Da lo mejor de ti!</p>
         </footer>
     </div>
+
     <script>
         const respuestasCorrectas = {
-            q1: "c",
-            q2: "c",
-            q3: "b",
-            q4: "c",
-            q5: "c",
-            q6: "b",
-            q7: "a",
-            q8: "a",
-            q9: "b",
-            q10: "b",
-            q11: "b",
-            q12: "b",
-            q13: "a",
-            q14: "b",
-            q15: "c",
-            q16: "b",
-            q17: "b",
-            q18: "a",
-            q19: "a",
-            q20: "b"
+            q1: "c", q2: "c", q3: "b", q4: "c", q5: "c",
+            q6: "b", q7: "a", q8: "a", q9: "b", q10: "b",
+            q11: "b", q12: "b", q13: "a", q14: "b", q15: "c",
+            q16: "b", q17: "b", q18: "a", q19: "a", q20: "b"
         };
 
         document.getElementById('formularioQuiz').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            let total = Object.keys(respuestasCorrectas).length;
+            const total = Object.keys(respuestasCorrectas).length;
             let aciertos = 0;
             let incompletas = [];
 
             for (let key in respuestasCorrectas) {
             const opciones = document.getElementsByName(key);
-            let marcada = false;
+            let respondida = false;
 
             for (let opcion of opciones) {
                 if (opcion.checked) {
-                marcada = true;
+                respondida = true;
                 if (opcion.value === respuestasCorrectas[key]) {
                     aciertos++;
                 }
                 }
             }
 
-            if (!marcada) {
-                incompletas.push(key);
-            }
+            if (!respondida) incompletas.push(key);
             }
 
             if (incompletas.length > 0) {
-            alert("Por favor responde todas las preguntas antes de enviar.");
+            document.getElementById("mensajeResultado").innerText = "⚠️ Por favor, responde todas las preguntas antes de enviar.";
+            document.getElementById("resultado").style.display = "block";
             return;
             }
 
-            alert(`Has acertado ${aciertos} de ${total} preguntas.\n${aciertos >= 15 ? "¡Muy bien hecho!" : "Sigue practicando y mejorarás 💪🏼"}`);
+            const mensaje =
+            aciertos >= 18 ? "🔥 ¡Excelente! Sabes muchísimo de gimnasio." :
+            aciertos >= 14 ? "💪 ¡Muy bien! Tienes una buena base." :
+            aciertos >= 10 ? "👍 Aceptable, pero puedes mejorar." :
+            "📘 Necesitas repasar. ¡Sigue entrenando!";
+
+            document.getElementById("mensajeResultado").innerText = `Has acertado ${aciertos} de ${total} preguntas.\n${mensaje}`;
+            document.getElementById("resultado").style.display = "block";
+            document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
         });
-</script>
+    </script>
+
 
 </body>
 </html>
