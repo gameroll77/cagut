@@ -13,7 +13,7 @@
         <h1>Quiz: Gimnasio</h1>
         <p class="quiz-subtitle">Responde las siguientes preguntas para evaluar tu nivel.</p>
         <div class="progress-bar-container">
-            <div class="progress-bar" style="width: 10%;"></div>
+            <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
         </div>
     </header>
 
@@ -346,9 +346,31 @@
             document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
         });
     </script>
+    <script>
+        // Función para actualizar la barra de progreso
+        function actualizarBarraProgreso() {
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+            let respondidas = 0;
 
+            for (let key in respuestasCorrectas) {
+                const opciones = document.getElementsByName(key);
+                for (let opcion of opciones) {
+                    if (opcion.checked) {
+                        respondidas++;
+                        break;
+                    }
+                }
+            }
 
-
-
+            const porcentaje = Math.round((respondidas / totalPreguntas) * 100);
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${porcentaje}%`;
+            progressBar.textContent = `${porcentaje}%`;
+        }
+            // Detectar cambios en cualquier radio y actualizar barra
+        document.querySelectorAll('input[type="radio"]').forEach((input) => {
+            input.addEventListener('change', actualizarBarraProgreso);
+        });
+    </script>
 </body>
 </html>

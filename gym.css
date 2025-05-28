@@ -58,16 +58,22 @@ body {
 .progress-bar-container {
     width: 100%;
     background-color: #3e3e6d;
-    border-radius: 5px;
-    height: 10px;
+    border-radius: 8px;
+    height: 20px; 
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .progress-bar {
     height: 100%;
     background-color: #4caf50;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: width 0.5s ease-in-out;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px; 
+    color: white;
+    font-size: 0.9rem;
 }
 
 .quiz-content {
