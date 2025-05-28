@@ -278,7 +278,7 @@
         </footer>
     </div>
 
-    <script>
+   <script>
         const respuestasCorrectas = {
             q1: "c", q2: "c", q3: "b", q4: "c", q5: "c",
             q6: "b", q7: "a", q8: "a", q9: "b", q10: "b",
@@ -294,38 +294,60 @@
             let incompletas = [];
 
             for (let key in respuestasCorrectas) {
-            const opciones = document.getElementsByName(key);
-            let respondida = false;
+                const opciones = document.getElementsByName(key);
+                let respondida = false;
 
-            for (let opcion of opciones) {
-                if (opcion.checked) {
-                respondida = true;
-                if (opcion.value === respuestasCorrectas[key]) {
-                    aciertos++;
+                for (let opcion of opciones) {
+                    if (opcion.checked) {
+                        respondida = true;
+                        if (opcion.value === respuestasCorrectas[key]) {
+                            aciertos++;
+                        }
+                    }
                 }
-                }
-            }
 
-            if (!respondida) incompletas.push(key);
+                if (!respondida) incompletas.push(key);
+
+                // Mostrar resultado visual bajo cada bloque de pregunta
+                const bloque = document.querySelector(`[name="${key}"]`).closest('.bloque-pregunta');
+                let resultadoDiv = bloque.querySelector('.feedback-respuesta');
+                if (!resultadoDiv) {
+                    resultadoDiv = document.createElement('div');
+                    resultadoDiv.className = 'feedback-respuesta';
+                    bloque.appendChild(resultadoDiv);
+                }
+                resultadoDiv.innerHTML = ''; // Reiniciar contenido anterior
+
+                if (respondida) {
+                    const opcionSeleccionada = [...opciones].find(op => op.checked);
+                    if (opcionSeleccionada.value === respuestasCorrectas[key]) {
+                        resultadoDiv.innerHTML = '<p style="color:green;font-weight:bold;margin-top:5px;">✅ ¡Correcto! ¡Bien hecho!</p>';
+                    } else {
+                        const respuestaCorrecta = [...opciones].find(op => op.value === respuestasCorrectas[key]).parentElement.innerText;
+                        resultadoDiv.innerHTML = `<p style="color:red;font-weight:bold;margin-top:5px;">❌ Incorrecto. La respuesta correcta es: "${respuestaCorrecta}"</p>`;
+                    }
+                }
             }
 
             if (incompletas.length > 0) {
-            document.getElementById("mensajeResultado").innerText = "⚠️ Por favor, responde todas las preguntas antes de enviar.";
-            document.getElementById("resultado").style.display = "block";
-            return;
+                document.getElementById("mensajeResultado").innerHTML = "⚠️ Por favor, responde todas las preguntas antes de enviar.";
+                document.getElementById("resultado").style.display = "block";
+                return;
             }
 
             const mensaje =
-            aciertos >= 18 ? "🔥 ¡Excelente! Sabes muchísimo de gimnasio." :
-            aciertos >= 14 ? "💪 ¡Muy bien! Tienes una buena base." :
-            aciertos >= 10 ? "👍 Aceptable, pero puedes mejorar." :
-            "📘 Necesitas repasar. ¡Sigue entrenando!";
+                aciertos >= 18 ? "🔥 ¡Excelente! Sabes muchísimo de gimnasio." :
+                aciertos >= 14 ? "💪 ¡Muy bien! Tienes una buena base." :
+                aciertos >= 10 ? "👍 Aceptable, pero puedes mejorar." :
+                "📘 Necesitas repasar. ¡Sigue entrenando!";
 
-            document.getElementById("mensajeResultado").innerText = `Has acertado ${aciertos} de ${total} preguntas.\n${mensaje}`;
+            document.getElementById("mensajeResultado").innerHTML = `Has acertado ${aciertos} de ${total} preguntas.<br>${mensaje}`;
             document.getElementById("resultado").style.display = "block";
             document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
         });
     </script>
+
+
 
 
 </body>
