@@ -1,16 +1,16 @@
 /* --- Estilos Específicos para las Páginas de Quiz --- */
 
 body {
-    background-color: #1e1e2f; /* Un fondo oscuro ligeramente diferente o más texturizado para el quiz */
+    background-color: #1e1e2f;
     color: #f0f0f0;
 }
 
 .quiz-main-container {
     width: 100%;
-    max-width: 800px; /* Un ancho adecuado para leer preguntas */
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #2c2c54; /* Color base para el contenedor del quiz */
+    background-color: #2c2c54;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -19,7 +19,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #4a4a7a; /* Separador sutil */
+    border-bottom: 1px solid #4a4a7a;
 }
 
 .quiz-header h1 {
@@ -52,9 +52,9 @@ body {
 
 .progress-bar-container {
     width: 100%;
-    background-color: #ddd;
-    height: 20px;
+    background-color: #3e3e6d;
     border-radius: 10px;
+    height: 20px;
     overflow: hidden;
     margin-top: 10px;
 }
@@ -62,21 +62,16 @@ body {
 .progress-bar {
     height: 100%;
     background-color: #4caf50;
-    width: 0%;
-    transition: width 0.3s ease;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
 }
-
 
 .quiz-content {
     margin-bottom: 30px;
 }
 
 .question-block {
-    background-color: #353560; /* Ligeramente más claro para destacar la pregunta */
+    background-color: #353560;
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 8px;
@@ -85,13 +80,13 @@ body {
 
 .question-title {
     font-size: 1.1rem;
-    color: #a0a0d0; /* Un color más suave para el "Pregunta X" */
+    color: #a0a0d0;
     margin-bottom: 8px;
     font-weight: 500;
 }
 
 .question-text {
-    font-size: 1.2rem; /* Tamaño principal para la pregunta */
+    font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -100,31 +95,31 @@ body {
 .options-group {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Espacio entre opciones */
+    gap: 12px;
 }
 
 .option {
-    display: flex; /* Para alinear input y label */
+    display: flex;
     align-items: center;
     padding: 12px 15px;
-    background-color: #2c2c54; /* Fondo de las opciones */
+    background-color: #2c2c54;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease, border-left 0.2s ease;
     border: 1px solid #4a4a7a;
-    border-left: 5px solid transparent; /* Para efecto hover/selected */
+    border-left: 5px solid transparent;
 }
 
 .option:hover {
     background-color: #3e3e6d;
-    border-left: 5px solid #6a6aff; /* Color de acento al pasar el ratón */
+    border-left: 5px solid #6a6aff;
 }
 
 .option input[type="radio"],
 .option input[type="checkbox"] {
     margin-right: 12px;
-    accent-color: #6a6aff; /* Color del check/radio button */
-    transform: scale(1.2); /* Hacerlos un poco más grandes */
+    accent-color: #6a6aff;
+    transform: scale(1.2);
 }
 
 .option .option-label {
@@ -134,22 +129,20 @@ body {
 
 .question-image {
     display: block;
-    margin: 2vh auto; /* Centrado de la imagen */
+    margin: 2vh auto;
     max-height: 366px;
     max-width: 550px;
-    width: 100%;  /* Hace que la imagen sea flexible pero no exceda el tamaño máximo */
-    height: auto;  /* Mantiene la proporción de la imagen */
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 12px 0px #5a5a8a;
-    object-fit: cover; /* Esto asegura que la imagen se recorte y ajuste bien si es necesario */
+    object-fit: cover;
 }
-
 
 .question-image:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
 }
-
 
 .input-group {
     margin-top: 10px;
@@ -176,7 +169,7 @@ body {
 }
 
 .submit-button {
-    background-color: #4CAF50; /* Verde para acción principal */
+    background-color: #4CAF50;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -200,6 +193,7 @@ body {
     color: #a0a0d0;
     font-size: 0.9em;
 }
+
 .final-box {
     display: none;
     position: fixed;
@@ -220,7 +214,7 @@ body {
 
 .final-box h2 {
     font-size: 1.8rem;
-    color: #4caf50; /* Verde para el título */
+    color: #4caf50;
     margin-bottom: 15px;
 }
 
@@ -228,19 +222,20 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff;
 }
 
 .result-detail {
     font-size: 1.1rem;
-    color: #f0f0f0; /* Blanco suave */
+    color: #f0f0f0;
 }
+
 .aprobado-text {
-    color: #ffffff !important; /* blanco */
+    color: #ffffff !important;
     font-weight: bold;
 }
 
 .suspendido-text {
-    color: #ff4c4c !important; /* rojo */
+    color: #ff4c4c !important;
     font-weight: bold;
 }

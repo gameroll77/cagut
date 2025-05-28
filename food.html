@@ -1,108 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Gimnasio - Preguntas</title>
-    <link rel="stylesheet" href="food.css">
-    <link rel="stylesheet" href="quiz-style.css">
-    <style>
-       .progress-bar-container {
-            width: 100%;
-            background-color: #ddd;
-            height: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background-color: #4caf50;
-            width: 0%;
-            transition: width 0.3s ease;
-            color: white;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .center-image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .circular-image {
-            width: 700px; /* ajusta tamaño a tu gusto */
-            height: 400px;
-            object-fit: cover;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border: 4px solid #4caf50; /* Borde verde saludable */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .circular-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Estilo del cuadro final de resultados */
-        .final-box {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-            border: 2px solid #4caf50;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .final-box .result-message {
-            font-size: 18px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .final-box .result-detail {
-            font-size: 16px;
-            color: #333;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Alimentación</title>
+  <link rel="stylesheet" href="food.css">
+  <link rel="stylesheet" href="quiz-style.css">
+  <style>
+    .progress-bar-container {
+      width: 100%;
+      background-color: #ddd;
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #4caf50;
+      width: 0%;
+      transition: width 0.3s ease;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .center-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .circular-image {
+      width: 700px;
+      height: 400px;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border: 4px solid #4caf50;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .circular-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    .final-box {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border: 2px solid #4caf50;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .final-box .result-message {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .final-box .result-detail {
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.7); z-index: 998;"></div>
-    <div class="quiz-main-container">
-        <header class="quiz-header">
-            <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
-            <h1>Quiz: Alimentación</h1>
-            <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
-            <div class="center-image-container">
-                <img src="images/alimentacio1.jpg" alt="Comida post ejercicio saludable" class="circular-image">
-            </div>
+  <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.7); z-index: 998;"></div>
+  <div class="quiz-main-container">
+    <header class="quiz-header">
+      <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
+      <h1>Quiz: Alimentación</h1>
+      <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
+      <div class="center-image-container">
+        <img src="images/alimentacio1.jpg" alt="Comida post ejercicio saludable" class="circular-image">
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar">0%</div>
+      </div>
+    </header>
 
-            <div class="progress-bar-container">
-                <div class="progress-bar">0%</div>
-            </div>
-        </header>
+    <main class="quiz-content">
+      <form id="quizForm">
 
-        <main class="quiz-content">
-            <form id="quizForm">
 
-                <!-- Pregunta 1 -->
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 1: ¿Qué comida se puede comer después de hacer ejercicio?</h2>
-                    <p class="question-text">Elige las comidas adecuadas que se pueden comer al acabar de entrenar.</p>
-                    <img src="images/alimentacio2.jpg" alt="Comida post ejercicio saludable" class="question-image">
-                    <div class="options-group">
-                        <label class="option"><input type="radio" name="q1" value="a"> Pollo a la plancha</label>
-                        <label class="option"><input type="radio" name="q1" value="b"> Batido de proteínas con plátano</label>
-                        <label class="option"><input type="radio" name="q1" value="c"> Coca cola con una hamburguesa</label>
-                        <label class="option"><input type="radio" name="q1" value="d"> Salchichas con jamón curado</label>
-                    </div>
-                </div>
+               <!-- Pregunta 1 -->
+<div class="question-block">
+  <h2 class="question-title">Pregunta 1: ¿Qué comida se puede comer después de hacer ejercicio?</h2>
+  <p class="question-text">Elige las comidas adecuadas que se pueden comer al acabar de entrenar.</p>
+  <img src="images/alimentacio2.jpg" alt="Comida post ejercicio saludable" class="question-image">
+  <div class="options-group">
+    <label class="option"><input type="radio" name="q1" value="a"> Pollo a la plancha</label>
+    <label class="option"><input type="radio" name="q1" value="b"> Batido de proteínas con plátano</label>
+    <label class="option"><input type="radio" name="q1" value="c"> Coca cola con una hamburguesa</label>
+    <label class="option"><input type="radio" name="q1" value="d"> Salchichas con jamón curado</label>
+  </div>
+</div>
+
 
                 <!-- Pregunta 2 -->
                 <div class="question-block">
@@ -209,124 +202,85 @@
                 <div class="quiz-navigation">
                     <button type="submit" class="submit-button">Enviar Respuestas</button>
                 </div>
-            </form>
-        </main>
+             </form>
+    </main>
 
-        <footer class="quiz-footer">
-            <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
-        </footer>
-    </div>
-        <div class="final-box">
-            
+    <footer class="quiz-footer">
+      <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
+    </footer>
 
-        </div>
+    <div class="final-box"></div>
+  </div>
 
-    <script>
-        const totalQuestions = 10;
+  <!-- Scripts -->
+  <script>
+    const totalQuestions = 10;
+    function updateProgressBar() {
+      let answeredCount = 0;
+      if (document.querySelector('input[name="q1"]:checked')) answeredCount++;
+      if (document.querySelector('input[name="q2"]:checked')) answeredCount++;
+      if (document.querySelectorAll('input[name="q3"]:checked').length > 0) answeredCount++;
+      if (document.querySelector('input[name="q4"]').value.trim() !== "") answeredCount++;
+      if (document.querySelector('textarea[name="q5"]').value.trim() !== "") answeredCount++;
+      if (document.querySelectorAll('input[name="q6"]:checked').length > 0) answeredCount++;
+      if (document.querySelector('input[name="q7"]:checked')) answeredCount++;
+      if (document.querySelector('input[name="q8"]:checked')) answeredCount++;
+      if (document.querySelector('textarea[name="q9"]').value.trim() !== "") answeredCount++;
+      if (document.querySelectorAll('input[name="q10"]:checked').length > 0) answeredCount++;
+      const percent = Math.round((answeredCount / totalQuestions) * 100);
+      const progressBar = document.querySelector('.progress-bar');
+      progressBar.style.width = percent + "%";
+      progressBar.textContent = percent + "%";
+    }
+    document.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('input', updateProgressBar);
+      input.addEventListener('change', updateProgressBar);
+    });
+    window.addEventListener('DOMContentLoaded', updateProgressBar);
+  </script>
 
-        function updateProgressBar() {
-            let answeredCount = 0;
-
-            if (document.querySelector('input[name="q1"]:checked')) answeredCount++;
-            if (document.querySelector('input[name="q2"]:checked')) answeredCount++;
-            if (document.querySelectorAll('input[name="q3"]:checked').length > 0) answeredCount++;
-            if (document.querySelector('input[name="q4"]').value.trim() !== "") answeredCount++;
-            if (document.querySelector('textarea[name="q5"]').value.trim() !== "") answeredCount++;
-            if (document.querySelectorAll('input[name="q6"]:checked').length > 0) answeredCount++;
-            if (document.querySelector('input[name="q7"]:checked')) answeredCount++;
-            if (document.querySelector('input[name="q8"]:checked')) answeredCount++;
-            if (document.querySelector('textarea[name="q9"]').value.trim() !== "") answeredCount++;
-            if (document.querySelectorAll('input[name="q10"]:checked').length > 0) answeredCount++;
-
-            const percent = Math.round((answeredCount / totalQuestions) * 100);
-            const progressBar = document.querySelector('.progress-bar');
-            progressBar.style.width = percent + "%";
-            progressBar.textContent = percent + "%";
-        }
-
-        document.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('input', updateProgressBar);
-            input.addEventListener('change', updateProgressBar);
-        });
-
-        window.addEventListener('DOMContentLoaded', updateProgressBar);
-    </script>
-    <script>
-document.getElementById("quizForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita recargar la página
-
-    let score = 0;
-
-    // Pregunta 1
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    if (q1 && (q1.value === "a" || q1.value === "b")) score++;
-
-    // Pregunta 2
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    if (q2 && q2.value === "true") score++;
-
-    // Pregunta 3
-    const q3 = Array.from(document.querySelectorAll('input[name="q3"]:checked')).map(cb => cb.value);
-    if (q3.includes("b") && q3.length === 1) score++;
-
-    // Pregunta 4
-    const q4 = document.querySelector('input[name="q4"]').value.trim();
-    if (q4 === "5" || q4.toLowerCase() === "cinco") score++;
-
-    // Pregunta 5
-    const q5 = document.querySelector('textarea[name="q5"]').value.toLowerCase();
-    if (q5.includes("fibra") || q5.includes("digestión") || q5.includes("intestino")) score++;
-
-    // Pregunta 6
-    const q6 = Array.from(document.querySelectorAll('input[name="q6"]:checked')).map(cb => cb.value);
-    if (q6.includes("b") && q6.length === 1) score++;
-
-    // Pregunta 7
-    const q7 = document.querySelector('input[name="q7"]:checked');
-    if (q7 && q7.value === "true") score++;
-
-    // Pregunta 8
-    const q8 = document.querySelector('input[name="q8"]:checked');
-    if (q8 && q8.value === "true") score++;
-
-    // Pregunta 9
-    const q9 = document.querySelector('textarea[name="q9"]').value.trim().toLowerCase();
-    if (q9.includes("2") || q9.includes("dos")) score++;
-
-    // Pregunta 10
-    const q10 = Array.from(document.querySelectorAll('input[name="q10"]:checked')).map(cb => cb.value);
-    if (q10.includes("b") && q10.length === 1) score++;
-
-    // Mostrar resultado
-   // Mostrar resultado
-const finalBox = document.querySelector('.final-box');
-const overlay = document.getElementById('overlay');
-
-const detailClass = score >= 5 ? 'aprobado-text' : 'suspendido-text';
-const detailMessage = score >= 5 ? '✅ ¡Has aprobado! ¡Buen trabajo!' : '❌ Has suspendido. ¡Sigue practicando!';
-
-finalBox.innerHTML = `
-    <h2>Resultado Final</h2>
-    <p class="result-message">Has acertado <strong>${score}</strong> de <strong>10</strong> preguntas.</p>
-    <p class="result-detail ${detailClass}">${detailMessage}</p>
-    <button id="closeResult" class="submit-button" style="margin-top:20px;">Cerrar</button>
-`;
-
-finalBox.style.display = "block";
-overlay.style.display = "block";
-
-// Scroll al resultado
-finalBox.scrollIntoView({ behavior: "smooth" });
-
-// Cierre del resultado
-document.getElementById("closeResult").addEventListener("click", () => {
-    finalBox.style.display = "none";
-    overlay.style.display = "none";
-});
-
-});
-</script>
-
-
+  <script>
+    document.getElementById("quizForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      let score = 0;
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      if (q1 && (q1.value === "a" || q1.value === "b")) score++;
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      if (q2 && q2.value === "true") score++;
+      const q3 = Array.from(document.querySelectorAll('input[name="q3"]:checked')).map(cb => cb.value);
+      if (q3.includes("b") && q3.length === 1) score++;
+      const q4 = document.querySelector('input[name="q4"]').value.trim();
+      if (q4 === "5" || q4.toLowerCase() === "cinco") score++;
+      const q5 = document.querySelector('textarea[name="q5"]').value.toLowerCase();
+      if (q5.includes("fibra") || q5.includes("digestión") || q5.includes("intestino")) score++;
+      const q6 = Array.from(document.querySelectorAll('input[name="q6"]:checked')).map(cb => cb.value);
+      if (q6.includes("b") && q6.length === 1) score++;
+      const q7 = document.querySelector('input[name="q7"]:checked');
+      if (q7 && q7.value === "true") score++;
+      const q8 = document.querySelector('input[name="q8"]:checked');
+      if (q8 && q8.value === "true") score++;
+      const q9 = document.querySelector('textarea[name="q9"]').value.trim().toLowerCase();
+      if (q9.includes("2") || q9.includes("dos")) score++;
+      const q10 = Array.from(document.querySelectorAll('input[name="q10"]:checked')).map(cb => cb.value);
+      if (q10.includes("b") && q10.length === 1) score++;
+      const finalBox = document.querySelector('.final-box');
+      const overlay = document.getElementById('overlay');
+      const detailClass = score >= 5 ? 'aprobado-text' : 'suspendido-text';
+      const detailMessage = score >= 5 ? '✅ ¡Has aprobado! ¡Buen trabajo!' : '❌ Has suspendido. ¡Sigue practicando!';
+      finalBox.innerHTML = `
+        <h2>Resultado Final</h2>
+        <p class="result-message">Has acertado <strong>${score}</strong> de <strong>10</strong> preguntas.</p>
+        <p class="result-detail ${detailClass}">${detailMessage}</p>
+        <button id="closeResult" class="submit-button" style="margin-top:20px;">Cerrar</button>
+      `;
+      finalBox.style.display = "block";
+      overlay.style.display = "block";
+      finalBox.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("closeResult").addEventListener("click", () => {
+        finalBox.style.display = "none";
+        overlay.style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>
