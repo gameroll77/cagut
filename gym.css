@@ -175,13 +175,17 @@ body {
     color: #a0a0d0;
     font-size: 0.9em;
 }
-.imagen-pregunta {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    object-fit: cover;
+
+.imagen-pregunta{
+    display: block; /* Para que margin auto funcione */
+    margin-left: auto; /* Centrado */
+    margin-right: auto; /* Centrado */
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 0px #5a5a8a;
+    max-height: 301px; /* Ajustado para que no sea demasiado grande */
+    max-width: 90%;   /* Que no exceda el contenedor de pregunta */
+    width: auto;      /* Mantiene la proporción */
+    height: auto;     /* Mantiene la proporción */
 }
