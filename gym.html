@@ -3,107 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Gimnasio - Preguntas</title>
-    <link rel="stylesheet" href="example.css"> <link rel="stylesheet" href="quiz-style.css"> </head>
+    <title>Quiz: Gimnasio - Conocimientos</title>
+    <link rel="stylesheet" href="gym.css">
+</head>
 <body>
     <div class="quiz-main-container">
-        <header class="quiz-header">
-            <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
-            <h1>Quiz: Gimnasio</h1>
-            <p class="quiz-subtitle">Responde las siguientes preguntas para probar tus conocimientos.</p>
-            <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 10%;"></div> </div>
-        </header>
+    <header class="quiz-header">
+        <a href="index.html" class="back-to-home-button">&larr; Volver a la Selección</a>
+        <h1>Quiz: Gimnasio</h1>
+        <p class="quiz-subtitle">Responde las siguientes preguntas para evaluar tu nivel.</p>
+        <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+        </div>
+    </header>
 
-        <main class="quiz-content">
-            <form id="quizForm">
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 1: Opción Múltiple</h2>
-                    <p class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit nulla quis lorem whakawhiti?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q1" value="a">
-                            <span class="option-label">Opción A: Lorem ipsum dolor.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="b">
-                            <span class="option-label">Opción B: Consectetur adipiscing.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="c">
-                            <span class="option-label">Opción C: Quisque nec erat.</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q1" value="d">
-                            <span class="option-label">Opción D: Integer blandit.</span>
-                        </label>
+        <main class="contenido-quiz">
+            <form id="formularioQuiz">
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 1</h2>
+                    <p class="texto-pregunta">¿Cuál es el principal beneficio del entrenamiento de fuerza?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q1" value="a"> Mejorar la flexibilidad</label>
+                        <label><input type="radio" name="q1" value="b"> Aumentar la resistencia cardiovascular</label>
+                        <label><input type="radio" name="q1" value="c"> Ganar masa muscular</label>
+                        <label><input type="radio" name="q1" value="d"> Reducir la vista cansada</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/fuerza.jpg" alt="Imagen relacionada con la pregunta">
+
+                </div>
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 2</h2>
+                    <p class="texto-pregunta">¿Cuántos grupos musculares principales hay en el cuerpo humano?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q2" value="a"> 3</label>
+                        <label><input type="radio" name="q2" value="b"> 5</label>
+                        <label><input type="radio" name="q2" value="c"> 7</label>
+                        <label><input type="radio" name="q2" value="d"> 10</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/grupos.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+                
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 3</h2>
+                    <p class="texto-pregunta">¿Qué significa hacer una 'repetición' en el gimnasio?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q3" value="a"> Un entrenamiento completo</label>
+                        <label><input type="radio" name="q3" value="b"> Una ejecución de un movimiento</label>
+                        <label><input type="radio" name="q3" value="c"> Un tipo de dieta</label>
+                        <label><input type="radio" name="q3" value="d"> Un descanso entre ejercicios</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/repeticion.jpg" alt="Imagen relacionada con la pregunta">
+
                 </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 2: Verdadero o Falso</h2>
-                    <p class="question-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="radio" name="q2" value="true">
-                            <span class="option-label">Verdadero</span>
-                        </label>
-                        <label class="option">
-                            <input type="radio" name="q2" value="false">
-                            <span class="option-label">Falso</span>
-                        </label>
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 4</h2>
+                    <p class="texto-pregunta">¿Qué máquina se usa principalmente para trabajar el pecho?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q4" value="a"> Remo</label>
+                        <label><input type="radio" name="q4" value="b"> Curl de pierna</label>
+                        <label><input type="radio" name="q4" value="c"> Press de banca</label>
+                        <label><input type="radio" name="q4" value="d"> Elíptica</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/pecho.jpg" alt="Imagen relacionada con la pregunta">
                 </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 3: Selección Múltiple</h2>
-                    <p class="question-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt?</p>
-                    <div class="options-group">
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="a">
-                            <span class="option-label">Opción Alpha: Neque porro quisquam.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="b">
-                            <span class="option-label">Opción Beta: Est qui dolorem ipsum.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="c">
-                            <span class="option-label">Opción Gamma: Quia dolor sit amet.</span>
-                        </label>
-                        <label class="option">
-                            <input type="checkbox" name="q3" value="d">
-                            <span class="option-label">Opción Delta: Consectetur, adipisci velit.</span>
-                        </label>
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 5</h2>
+                    <p class="texto-pregunta">¿Cuánto tiempo mínimo se recomienda calentar antes de entrenar?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q5" value="a"> 2 minutos</label>
+                        <label><input type="radio" name="q5" value="b"> 20 minutos</label>
+                        <label><input type="radio" name="q5" value="c"> 5-10 minutos</label>
+                        <label><input type="radio" name="q5" value="d"> No hace falta calentar</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/calentamiento.jpg" alt="Imagen relacionada con la pregunta">
                 </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 4: Rellenar el Espacio</h2>
-                    <p class="question-text">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum ________ atque corrupti quos dolores."</p>
-                    <div class="input-group">
-                        <input type="text" name="q4" placeholder="Escribe tu respuesta aquí..." class="text-input">
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 6</h2>
+                    <p class="texto-pregunta">¿Cuál es el macronutriente más importante para ganar masa muscular?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q6" value="a"> Grasas</label>
+                        <label><input type="radio" name="q6" value="b"> Proteínas</label>
+                        <label><input type="radio" name="q6" value="c"> Azúcares</label>
+                        <label><input type="radio" name="q6" value="d"> Vitaminas</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/macros.jpg" alt="Imagen relacionada con la pregunta">
                 </div>
 
-                <div class="question-block">
-                    <h2 class="question-title">Pregunta 5: Respuesta Corta</h2>
-                    <p class="question-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Explica brevemente.</p>
-                    <div class="input-group">
-                        <textarea name="q5" rows="3" placeholder="Tu explicación breve..." class="text-input"></textarea>
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 7</h2>
+                    <p class="texto-pregunta">¿Qué ejercicio trabaja principalmente la espalda?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q7" value="a"> Dominadas</label>
+                        <label><input type="radio" name="q7" value="b"> Sentadillas</label>
+                        <label><input type="radio" name="q7" value="c"> Abdominales</label>
+                        <label><input type="radio" name="q7" value="d"> Curl de bíceps</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/espalda.jpg" alt="Imagen relacionada con la pregunta">
                 </div>
 
-                <div class="quiz-navigation">
-                    <button type="submit" class="submit-button">Enviar Respuestas</button>
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 8</h2>
+                    <p class="texto-pregunta">¿Qué parte del cuerpo se entrena con sentadillas?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q8" value="a"> Piernas y glúteos</label>
+                        <label><input type="radio" name="q8" value="b"> Hombros</label>
+                        <label><input type="radio" name="q8" value="c"> Abdominales</label>
+                        <label><input type="radio" name="q8" value="d"> Pecho</label>
                     </div>
+                    <img class="imagen-pregunta" src="imagenes gym/sentadilla.png" alt="Imagen relacionada con la pregunta">
+
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 9</h2>
+                    <p class="texto-pregunta">¿Cuántos días por semana se recomienda descansar del entrenamiento intenso?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q9" value="a"> Ninguno</label>
+                        <label><input type="radio" name="q9" value="b"> 1-2 días</label>
+                        <label><input type="radio" name="q9" value="c"> 5 días</label>
+                        <label><input type="radio" name="q9" value="d"> Solo domingos</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/descanso.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 10</h2>
+                    <p class="texto-pregunta">¿Cuál es el objetivo del cardio en el gimnasio?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q10" value="a"> Aumentar masa muscular</label>
+                        <label><input type="radio" name="q10" value="b"> Mejorar resistencia y quemar grasa</label>
+                        <label><input type="radio" name="q10" value="c"> Mejorar visión</label>
+                        <label><input type="radio" name="q10" value="d"> Trabajar solo piernas</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/cardio.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 11</h2>
+                    <p class="texto-pregunta">¿Cuál es la forma correcta de respirar durante una repetición?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q11" value="a"> Contener el aire todo el tiempo</label>
+                        <label><input type="radio" name="q11" value="b"> Exhalar al hacer esfuerzo, inhalar al regresar</label>
+                        <label><input type="radio" name="q11" value="c"> Respirar muy rápido</label>
+                        <label><input type="radio" name="q11" value="d"> Solo inhalar</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/respiracion.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 12</h2>
+                    <p class="texto-pregunta">¿Qué bebida es más recomendable justo después de entrenar?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q12" value="a"> Bebida alcohólica</label>
+                        <label><input type="radio" name="q12" value="b"> Agua o batido de proteínas</label>
+                        <label><input type="radio" name="q12" value="c"> Refresco</label>
+                        <label><input type="radio" name="q12" value="d"> Zumo con azúcar añadido</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/bebidas.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 13</h2>
+                    <p class="texto-pregunta">¿Qué significa hacer una 'serie' en el gimnasio?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q13" value="a"> Conjunto de repeticiones</label>
+                        <label><input type="radio" name="q13" value="b"> Ejercicio largo</label>
+                        <label><input type="radio" name="q13" value="c"> Día de entrenamiento</label>
+                        <label><input type="radio" name="q13" value="d"> Rutina semanal</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/serie.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 14</h2>
+                    <p class="texto-pregunta">¿Qué parte del cuerpo trabaja el press militar?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q14" value="a"> Piernas</label>
+                        <label><input type="radio" name="q14" value="b"> Hombros</label>
+                        <label><input type="radio" name="q14" value="c"> Espalda</label>
+                        <label><input type="radio" name="q14" value="d"> Abdominales</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/militar.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 15</h2>
+                    <p class="texto-pregunta">¿Qué pasa si no descansas lo suficiente entre entrenamientos?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q15" value="a"> Aumentas fuerza más rápido</label>
+                        <label><input type="radio" name="q15" value="b"> No pasa nada</label>
+                        <label><input type="radio" name="q15" value="c"> Puedes lesionarte o sobreentrenarte</label>
+                        <label><input type="radio" name="q15" value="d"> Ganas grasa</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/peligro.jpg" alt="Imagen relacionada con la pregunta">
+
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 16</h2>
+                    <p class="texto-pregunta">¿Qué músculo se activa más al hacer abdominales clásicos?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q16" value="a"> Tríceps</label>
+                        <label><input type="radio" name="q16" value="b"> Recto abdominal</label>
+                        <label><input type="radio" name="q16" value="c"> Glúteo</label>
+                        <label><input type="radio" name="q16" value="d"> Trapecio</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/abs.jpg" alt="Imagen relacionada con la pregunta">
+
+                </div>
+            
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 17</h2>
+                    <p class="texto-pregunta">¿Cuándo se recomienda estirar los músculos?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q17" value="a"> Antes de dormir</label>
+                        <label><input type="radio" name="q17" value="b"> Después del entrenamiento</label>
+                        <label><input type="radio" name="q17" value="c"> Solo antes del cardio</label>
+                        <label><input type="radio" name="q17" value="d"> Nunca</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/estiramientos.jpg" alt="Imagen relacionada con la pregunta">
+
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 18</h2>
+                    <p class="texto-pregunta">¿Qué es una rutina 'full body'?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q18" value="a"> Entrenar todo el cuerpo en una sola sesión</label>
+                        <label><input type="radio" name="q18" value="b"> Solo cardio</label>
+                        <label><input type="radio" name="q18" value="c"> Entrenar solo la parte superior</label>
+                        <label><input type="radio" name="q18" value="d"> Una rutina de yoga</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/fullbody.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 19</h2>
+                    <p class="texto-pregunta">¿Cuál de estas actividades es anaeróbica?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q19" value="a"> Levantamiento de pesas</label>
+                        <label><input type="radio" name="q19" value="b"> Correr largas distancias</label>
+                        <label><input type="radio" name="q19" value="c"> Caminata</label>
+                        <label><input type="radio" name="q19" value="d"> Natación suave</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/actividad.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+
+                <div class="bloque-pregunta">
+                    <h2 class="titulo-pregunta">Pregunta 20</h2>
+                    <p class="texto-pregunta">¿Qué es lo más importante para evitar lesiones?</p>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="q20" value="a"> Usar ropa de marca</label>
+                        <label><input type="radio" name="q20" value="b"> Técnica correcta y calentamiento</label>
+                        <label><input type="radio" name="q20" value="c"> Escuchar música motivadora</label>
+                        <label><input type="radio" name="q20" value="d"> Tomar suplementos</label>
+                    </div>
+                    <img class="imagen-pregunta" src="imagenes gym/lesion.jpg" alt="Imagen relacionada con la pregunta">
+                </div>
+                <button type="submit" class="submit-button">Enviar Respuestas</button>
             </form>
+            <div id="resultado" class="resultado-final" style="display: none;">
+                <h2>Resultado del Quiz</h2>
+                <p id="mensajeResultado"></p>
+            </div>
+
         </main>
 
-        <footer class="quiz-footer">
-            <p>&copy; 2025 QuizMaster Pro. Intenta tu mejor esfuerzo.</p>
+        <footer class="pie-quiz">
+            <p>&copy; 2025 QuizMaster Pro. ¡Da lo mejor de ti!</p>
         </footer>
     </div>
+
+   <script>
+        const respuestasCorrectas = {
+            q1: "c", q2: "c", q3: "b", q4: "c", q5: "c",
+            q6: "b", q7: "a", q8: "a", q9: "b", q10: "b",
+            q11: "b", q12: "b", q13: "a", q14: "b", q15: "c",
+            q16: "b", q17: "b", q18: "a", q19: "a", q20: "b"
+        };
+
+        document.getElementById('formularioQuiz').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const total = Object.keys(respuestasCorrectas).length;
+            let aciertos = 0;
+            let incompletas = [];
+
+            for (let key in respuestasCorrectas) {
+                const opciones = document.getElementsByName(key);
+                let respondida = false;
+
+                for (let opcion of opciones) {
+                    if (opcion.checked) {
+                        respondida = true;
+                        if (opcion.value === respuestasCorrectas[key]) {
+                            aciertos++;
+                        }
+                    }
+                }
+
+                if (!respondida) incompletas.push(key);
+
+                // Mostrar resultado visual bajo cada bloque de pregunta
+                const bloque = document.querySelector(`[name="${key}"]`).closest('.bloque-pregunta');
+                let resultadoDiv = bloque.querySelector('.feedback-respuesta');
+                if (!resultadoDiv) {
+                    resultadoDiv = document.createElement('div');
+                    resultadoDiv.className = 'feedback-respuesta';
+                    bloque.appendChild(resultadoDiv);
+                }
+                resultadoDiv.innerHTML = ''; // Reiniciar contenido anterior
+
+                if (respondida) {
+                    const opcionSeleccionada = [...opciones].find(op => op.checked);
+                    if (opcionSeleccionada.value === respuestasCorrectas[key]) {
+                        resultadoDiv.innerHTML = '<p style="color:green;font-weight:bold;margin-top:5px;">✅ ¡Correcto! ¡Bien hecho!</p>';
+                    } else {
+                        const respuestaCorrecta = [...opciones].find(op => op.value === respuestasCorrectas[key]).parentElement.innerText;
+                        resultadoDiv.innerHTML = `<p style="color:red;font-weight:bold;margin-top:5px;">❌ Incorrecto. La respuesta correcta es: "${respuestaCorrecta}"</p>`;
+                    }
+                }
+            }
+
+            if (incompletas.length > 0) {
+                document.getElementById("mensajeResultado").innerHTML = "⚠️ Por favor, responde todas las preguntas antes de enviar.";
+                document.getElementById("resultado").style.display = "block";
+                return;
+            }
+
+            const mensaje =
+                aciertos >= 18 ? "🔥 ¡Excelente! Sabes muchísimo de gimnasio." :
+                aciertos >= 14 ? "💪 ¡Muy bien! Tienes una buena base." :
+                aciertos >= 10 ? "👍 Aceptable, pero puedes mejorar." :
+                "📘 Necesitas repasar. ¡Sigue entrenando!";
+
+            document.getElementById("mensajeResultado").innerHTML = `Has acertado ${aciertos} de ${total} preguntas.<br>${mensaje}`;
+            document.getElementById("resultado").style.display = "block";
+            document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        // Función para actualizar la barra de progreso
+        function actualizarBarraProgreso() {
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+            let respondidas = 0;
+
+            for (let key in respuestasCorrectas) {
+                const opciones = document.getElementsByName(key);
+                for (let opcion of opciones) {
+                    if (opcion.checked) {
+                        respondidas++;
+                        break;
+                    }
+                }
+            }
+
+            const porcentaje = Math.round((respondidas / totalPreguntas) * 100);
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${porcentaje}%`;
+            progressBar.textContent = `${porcentaje}%`;
+        }
+            // Detectar cambios en cualquier radio y actualizar barra
+        document.querySelectorAll('input[type="radio"]').forEach((input) => {
+            input.addEventListener('change', actualizarBarraProgreso);
+        });
+    </script>
 </body>
 </html>
